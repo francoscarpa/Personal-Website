@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sansSerif: Futura, "Segoe UI", Verdana, sans-serif;
+  --serif: "Baskerville", "Book Antiqua", Georgia, serif;
+  --monospace: "Monaco", Consolas, monospace;
+  --lightOrange: #fff5cf;
+  --darkSienna: #000;
+  --indigoDye: #2b50aa;
+  --chineseRed: #923026;
+  --carolinaBlue: #00ff00;
+  --margin: 11.089vw;
+  --step6: calc(1.602rem + 5.063vw);
+  --step5: calc(1.424rem + 3.375vw);
+  --step4: calc(1.266rem + 2.25vw);
+  --step3: calc(1.125rem + 1.5vw);
+  --step2: calc(1rem + 1vw);
+  --step1: calc(0.889rem + 0.667vw);
+  --step0: calc(0.79rem + 0.444vw);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font: 100%/1.45 var(--sansSerif);
+  background: var(--lightOrange);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--chineseRed);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: var(--step2) 0 var(--step0);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+  margin: calc(var(--margin) * 0.5);
+  font-size: var(--step0);
+  max-width: calc(var(--step0) * 30);
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--chineseRed);
+}
+
+.active {
+  color: var(--indigoDye);
+}
+
+/* Main content */
+main {
+  margin: calc(var(--margin) * 0.5);
+  flex: 1;
+}
+
+header {
+  margin-bottom: var(--step5);
+}
+
+h1 {
+  font-size: var(--step6);
+  color: var(--chineseRed);
+}
+
+h2 {
+  font: normal var(--step5) / 1.1 var(--serif);
+  color: var(--darkSienna);
+}
+
+main p,
+ul,
+ol {
+  margin-bottom: var(--step0);
+  font: var(--step1) / 1.3 var(--serif);
+  max-width: calc(var(--step2) * 24);
+}
+
+ul,
+ol {
+  padding: 0 0 var(--step1) var(--step4);
+  margin: 0;
+}
+
+.metadata {
+  margin: 0;
+  font: var(--step0) var(--sansSerif);
+}
+
+.underH1,
+.underMetadata {
+  margin-top: var(--step5);
+}
+
+.link {
+  margin: calc(var(--step0) * 0.5) 0 var(--step3) 0;
+  font-size: var(--step3);
+}
+
+.contact {
+  margin-top: var(--step5);
+}
+
+.contact p {
+  margin-top: var(--step0);
+  font-style: italic;
+  color: var(--indigoDye);
+}
+
+.contact hr {
+  border: 0.5px solid var(--indigoDye);
+}
+
+code {
+  font: 70%/1 var(--monospace);
+}
+
+/* Footer */
+footer {
+  margin-top: var(--step6);
+  padding: calc(var(--margin) * 0.5);
+  background: var(--darkSienna);
+  color: var(--lightOrange);
+  font-size: var(--step0);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--carolinaBlue);
+}
+
+@media (min-width: 30rem) {
+}

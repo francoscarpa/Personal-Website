@@ -1,0 +1,27 @@
+---
+layout: articleFramework.njk
+title: How I Built my Website from Scratch - The Tools I Use • Franco Scarpa
+h1: How I Built my Website from Scratch - The Tools I Use
+tags: articles
+published: 2020.4.10
+description: This is the first article of the series about how I built my website from scratch. Here I explain the tools I used to develop it.
+---
+<p class="underMetadata">This’s the first article about how I built <a href="/">francoscarpa.com</a> from scratch. In this article, I describe the tools I use to develop and manage it.</p>
+
+<h2>Eleventy, a Static Site Generator</h2>
+
+<p>This website is <b>static</b>. This means it’s made of static HTML files directly sent by the server to your device and rendered by your browser, without any previous server-side rendering or access to a database. In particular, using a database puts you in front of additional security issues, not to mention that accessing a database is a slow operation. Server-side rendering is another cause that slows down the loading of a website since a webpage needs to be built on demand before a user can view it.</p>
+
+<p>If a website is simple, you could write it as single independent HTML files (or maybe even just one). But this approach is unproductive since it forces you to edit each file separately. Static site generators are the game-changer. SSGs take content files, apply templates to them, and generate a website made of purely static HTML files. In my case, I used <a href="https://www.11ty.dev/">Eleventy</a>, and I still use this SSG to manage my website. I find it to be simple to use, and really fast. Of course, this article is not meant to be an Eleventy tutorial. If you’re interested in it, <a href="https://www.11ty.dev/">check its website</a>.</p>
+
+<h2>Utopia and the Fluid Responsive Design</h2>
+
+<p>Another vehicle I use to develop <a href="/">francoscarpa.com</a> is <a href="https://utopia.fyi/">Utopia</a>. On its website, it’s described as <i>“[...] not a product, a plugin, or a framework. It’s a memorable/pretentious word we use to refer to a way of thinking about fluid responsive design”</i>. In a nutshell, it’s a tool that lets you use fluid units to lay your website out, taking advantage of the infinite range of devices and viewports available today. More about Utopia in the section about the appearance of my website.</p>
+
+<h2>Netlify and the JAMstack approach</h2>
+
+<p>I host <a href="/">francoscarpa.com</a> on <a href="https://www.netlify.com/">Netlify</a>, <i>“a cloud computing company that offers hosting and serverless backend services for web applications and static websites,”</i> as Wikipedia states. Again, this article is not meant to give you an overview of Netlify functionalities. You can read about all of them on <a href="https://www.netlify.com/">Netlify’s website</a>. You just need to know that Netlify is an excellent choice for those who want to publish a static site, also for free.</p>
+
+<p>My website uses a JAMstack strategy. Have you ever heard of it? It’s a new approach to build websites, a path that involves using, guess what, only static HTML files, without server-side rendering, nor accesses to databases. Netlify is strictly tied to the JAMstack; not by chance, you can find an <a href="https://www.netlify.com/jamstack/">excellent overview of this new approach on Netlify’s website</a> again.</p>
+
+<p>This article ends here. I can’t wait to publish the second one, which will be about the appearance of <a href="/">francoscarpa.com</a>, so: stay tuned!</p>

@@ -1,0 +1,22 @@
+---
+layout: framework.njk
+title: Notes - Franco Scarpa
+tags: mainMenuPage
+order: 3
+nameDisplayed: Notes
+description: Brief, personal posts about topics of my interest or just something I want to share with you.
+---
+<header>
+   <h1>Notes</h1>
+   <h2>Brief, personal posts</h2>
+</header>
+
+{%- for note in collections.notes | reverse -%}
+   <p class="metadata">Published on <span>{{note.date.toDateString()}}</span></p>
+   {% if note.date.updated %}
+      <p class="metadata">Updated on <span>{{note.data.updated}}</span></p>
+   {% endif %}
+   <p class="link">
+      <a href="{{ note.url }}">{{ note.data.h1 }}</a>
+   </p>
+{%- endfor -%}
