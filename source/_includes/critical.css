@@ -120,7 +120,7 @@ ol {
 
 .metadata span {
   display: inline-block;
-  width: 8rem;
+  width: calc(var(--step0) * 7);
   font-family: var(--serif);
 }
 
