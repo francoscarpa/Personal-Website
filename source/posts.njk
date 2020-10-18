@@ -1,0 +1,24 @@
+---
+layout: framework.njk
+title: Posts - Franco Scarpa
+tags: mainMenuPage
+order: 3
+nameDisplayed: Posts
+description: Brief, personal thoughts about topics of my interest or just something I want to share with you.
+---
+<header>
+   <h1>Posts</h1>
+   <h2>Brief, personal thoughts</h2>
+</header>
+
+{%- for post in collections.posts | reverse -%}
+   <p class="metadata">
+      <span>Published on</span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</p>
+   {% if note.date.updated %}
+      <p class="metadata">
+         <span>Updated on</span>{{post.data.updated}}</p>
+   {% endif %}
+   <p class="link">
+      <a href="{{ post.url }}">{{ post.data.h1 }}</a>
+   </p>
+{%- endfor -%}
