@@ -118,6 +118,12 @@ ol {
   font: var(--step0) var(--sansSerif);
 }
 
+.metadata span {
+  display: inline-block;
+  width: 8rem;
+  font-family: var(--serif);
+}
+
 .underH1,
 .underMetadata {
   margin-top: var(--step5);
@@ -134,7 +140,6 @@ ol {
 
 .contact p {
   margin-top: var(--step0);
-  font-style: italic;
   color: var(--indigoDye);
 }
 
@@ -158,7 +163,4 @@ footer {
 footer a {
   text-decoration: none;
   color: var(--carolinaBlue);
-}
-
-@media (min-width: 30rem) {
 }

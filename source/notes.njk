@@ -12,9 +12,11 @@ description: Brief, personal posts about topics of my interest or just something
 </header>
 
 {%- for note in collections.notes | reverse -%}
-   <p class="metadata">Published on <span>{{note.date.toDateString()}}</span></p>
+   <p class="metadata">
+      <span>Published on</span>{{note.date.getFullYear() + "." + (note.date.getMonth() + 1) + "." + note.date.getDate()}}</p>
    {% if note.date.updated %}
-      <p class="metadata">Updated on <span>{{note.data.updated}}</span></p>
+      <p class="metadata">
+         <span>Updated on</span>{{note.data.updated}}</p>
    {% endif %}
    <p class="link">
       <a href="{{ note.url }}">{{ note.data.h1 }}</a>

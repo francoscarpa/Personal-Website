@@ -7,9 +7,11 @@ layout: framework.njk
 
 <p class="metadata underH1">
    <a href="/blog/">Blog</a> » {{ h1 }}</p>
-<p class="metadata">Published on {{ published }}</p>
+<p class="metadata">
+   <span>Published on</span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</p>
 {% if updated %}
-   <p class="metadata">Updated on {{updated}}</p>
+   <p class="metadata">
+      <span>Updated on</span>{{updated}}</p>
 {% endif %}
 {{ content | safe }}
 
