@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy-navigation": "^0.1.5"
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.5",
+    "cssmin": "^0.4.3"
   },
   "dependencies": {
     "html-minifier": "^4.0.0"

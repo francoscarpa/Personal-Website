@@ -8,10 +8,10 @@ layout: framework.njk
 <p class="metadata underH1">
    <a href="/notes/">Notes</a> » {{ h1 }}</p>
 <p class="metadata">
-   <span>Published on</span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</p>
+   <span>Published on</span><span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span></p>
 {% if updated %}
    <p>
-      <span>Updated on</span>{{updated}}</p>
+      <span>Updated on</span><span>{{updated}}</span></p>
 {% endif %}
 {{ content | safe }}
 
