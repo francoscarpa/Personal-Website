@@ -33,6 +33,8 @@ body {
   background: var(--lightOrange);
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 a {
@@ -153,7 +155,7 @@ ol {
 }
 
 code {
-  font: 70%/1 var(--monospace);
+  font: 80%/1 var(--monospace);
 }
 
 /* Footer */
