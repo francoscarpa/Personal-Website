@@ -8,7 +8,7 @@
       <meta name="description" content="{{ description }}">
       <link rel="manifest" href="/manifest.json">
       {% set css %}
-      {% include "critical.css" %}
+      {% include "style.css" %}
       {% endset %}
       <style>
          {{css | cssmin | safe}}
@@ -60,6 +60,6 @@
          <a href="/contact/">Contact</a> / 
          <a href="/accessibility/">Accessibility</a>
       </footer>
-      {% include "swRegistration.html" %}
+      {% include "script.html" %}
    </body>
 </html>

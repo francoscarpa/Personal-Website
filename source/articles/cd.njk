@@ -1,0 +1,25 @@
+---
+layout: articleFramework.njk
+title: I Use Netlify’s Continuous Deployment, and You Should Do the Same - Franco Scarpa
+h1: I Use Netlify’s Continuous Deployment, and You Should Do the Same
+tags: articles
+date: 2020-10-25
+description: I tell you how I started using Netlify’s continuos deployment to link my GitHub repository to Netlify and runs a build process automatically every time I push changes.
+---
+<p class="underH1">As I wrote some days ago in a <a href="/notes/cd/">post</a>, my website now uses <a href="https://www.netlify.com/products/workflow/">Netlify’s continuous deployment</a>.</p>
+
+<p>When I first started using Netlify to host my website, <a href="/">francoscarpa.com</a>, I saw different methods to upload the static files that made it up. The first way was the classic <a href="https://app.netlify.com/drop">drag and drop</a>. I could move files to Netlify’s website and get a published website in seconds. It was my original approach.</p>
+
+<p>Then, <a href="https://docs.netlify.com/cli/get-started/">Netlify CLI</a> reached my ears. I integrated Netlify with the terminal of my MacBook Pro. This way, I could use simple commands launched from my machine without relying on the Web service to publish the website. I thought this method could be my default one, but then version control entered the scene.</p>
+
+<p>Since I started working for my actual company, I have been using both Git and Team Foundation Version Control as the version control systems. I already knew the importance of VCSs before then, but I never had the chance nor the reason to use them in real life before. Netlify’s integration with GitHub encouraged me to integrate version control in my projects, too.</p>
+
+<p>I created a <a href="https://github.com/francoscarpa/francoscarpa.com">GitHub repository</a> to hold all of my website’s source code, including the <code>package.json</code> file, which is mandatory to let Netlify know which dependencies your project has. Then, I configured Netlify to link my website to that repository so that every time I push changes to GitHub, Netlify runs a build on that code and publish the resulting outcome on the fly. You need to specify which build command Netlify needs to run to start the compilation process. In my case, it’s <code>npx @11ty/eleventy</code> since I use the <a href="https://www.11ty.dev/">Eleventy</a> static site generator.</p>
+
+<p>This modus operandi has two benefits:</p>
+<ol>
+   <li>I make changes locally and push them to a remote repository, so I always have a backup copy of my project securely stored online.</li>
+   <li>I don’t have to run a second command to compile the source code locally and publish it to Netlify since Netlify itself does the work for me.</li>
+</ol>
+
+<p><a href="/imgs/cd/1.png">Here</a> you can see the latest deploys I made so far, while <a href="/imgs/cd/2.png">here</a> and <a href="/imgs/cd/3.png">here</a>, I show you the settings I use for the build process. I highly recommend you to configure Netlify to use continuous deployment since it’s a great way not only to speed up your workflow but also to have a backup copy of your precious source code.</p>
