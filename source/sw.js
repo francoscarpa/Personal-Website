@@ -1,4 +1,4 @@
-const CACHE_NAME = "static80";
+const CACHE_NAME = "static81";
 const STATIC_FILES = ["/", "/blog/", "/links/", "/about/", "/contact/", "/privacyPolicy/", "/posts/", "/offline/", "/accessibility/"];
 
 self.addEventListener("install", function (event) {

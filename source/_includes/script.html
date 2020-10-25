@@ -1,21 +1,4 @@
 <script>
-   var body = document.getElementsByTagName("body")[0];
-   var links = document.querySelectorAll("a");
-
-   window.addEventListener('load', (event) => {
-      body.style.opacity = 1;
-   });
-
-   links.forEach(element => {
-      element.addEventListener("click", (event) => {
-         event.preventDefault(event);
-         body.style.opacity = 0;
-         body.addEventListener('transitionend', () => {
-            window.location.href = event.target.href;
-         });
-      });
-   });
-
    if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
          console.log("Service worker registrato");
