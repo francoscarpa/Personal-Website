@@ -5,14 +5,16 @@ layout: framework.njk
    <h1>{{ h1 }}</h1>
 </header>
 
-<p class="metadata underH1">
-   <a href="/notes/">Notes</a> » {{ h1 }}</p>
-<p class="metadata">
-   <span>Published on</span><span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span></p>
-{% if updated %}
-   <p>
-      <span>Updated on</span><span>{{updated}}</span></p>
-{% endif %}
-{{ content | safe }}
+<div>
+   <p class="metadata underH1">
+      <a href="/notes/">Notes</a> » {{ h1 }}</p>
+   <p class="metadata">
+      <span>Published on</span><span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span></p>
+   {% if updated %}
+      <p>
+         <span>Updated on</span><span>{{updated}}</span></p>
+   {% endif %}
+   {{ content | safe }}
 
-{% include "contact.html" %}
+   {% include "contact.html" %}
+</div>

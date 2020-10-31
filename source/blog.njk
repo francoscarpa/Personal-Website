@@ -11,14 +11,16 @@ description: Here you can find Franco Scarpa’s articles about web development 
    <h2>Articles about software development and more</h2>
 </header>
 
-{%- for post in collections.articles | reverse -%}
-   <p class="metadata">
-      <span>Published on</span><span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span></p>
-   {% if post.data.updated %}
+<div>
+   {%- for post in collections.articles | reverse -%}
       <p class="metadata">
-         <span>Updated on</span><span>{{post.data.updated}}</span></p>
-   {% endif %}
-   <p class="link">
-      <a href="{{ post.url }}">{{ post.data.h1 }}</a>
-   </p>
-{%- endfor -%}
+         <span>Published on</span><span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span></p>
+      {% if post.data.updated %}
+         <p class="metadata">
+            <span>Updated on</span><span>{{post.data.updated}}</span></p>
+      {% endif %}
+      <p class="link">
+         <a href="{{ post.url }}">{{ post.data.h1 }}</a>
+      </p>
+   {%- endfor -%}
+</div>
