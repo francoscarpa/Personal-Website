@@ -147,6 +147,10 @@ ol {
   font-size: var(--step3);
 }
 
+main div *:last-child {
+  margin-bottom: 0;
+}
+
 .contact {
   margin-top: var(--step5);
 }
