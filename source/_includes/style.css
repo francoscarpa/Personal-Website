@@ -8,10 +8,13 @@
   --sansSerif: Futura, "Segoe UI", Verdana, sans-serif;
   --serif: "Baskerville", "Book Antiqua", Georgia, serif;
   --monospace: "Monaco", Consolas, monospace;
-  --lightOrange: #f9f5ff;
-  --darkSienna: #000000;
-  --indigoDye: #623cea;
-  --chineseRed: #db162f;
+
+  --black: #000;
+  --white: #fbfbff;
+  --orangeOverBlack: #ff6347;
+  --redOverWhite: #aa0000;
+  --violetOverWhite: #7023b7;
+
   --margin: 11.089vw;
   --step6: calc(1.602rem + 5.063vw);
   --step5: calc(1.424rem + 3.375vw);
@@ -29,14 +32,14 @@ body {
 
 body {
   font: 100%/1.45 var(--sansSerif);
-  background: var(--darkSienna);
+  background: var(--black);
   display: flex;
   flex-direction: column;
 }
 
 a {
   text-decoration: none;
-  color: var(--chineseRed);
+  color: var(--redOverWhite);
 }
 
 h1,
@@ -71,11 +74,11 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--chineseRed);
+  color: var(--orangeOverBlack);
 }
 
 .active {
-  color: var(--lightOrange);
+  color: var(--white);
 }
 
 /* Main content */
@@ -85,27 +88,32 @@ main {
 
 main div:nth-child(2) {
   padding: calc(var(--margin) * 0.5);
-  background: var(--lightOrange);
+  background: var(--white);
 }
 
 main div h2 {
-  color: var(--darkSienna);
+  color: var(--black);
+  margin: var(--step6) 0 var(--step0) 0;
 }
 
 header {
-  background: var(--darkSienna);
-  margin-bottom: var(--step5);
+  background: var(--black);
   padding: calc(var(--margin) * 0.5);
 }
 
 h1 {
   font-size: var(--step6);
-  color: var(--chineseRed);
+  color: var(--orangeOverBlack);
 }
 
 h2 {
   font: normal var(--step5) / 1.1 var(--serif);
-  color: var(--lightOrange);
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+h2 a {
+  color: var(--orangeOverBlack);
 }
 
 main p,
@@ -125,6 +133,9 @@ ol {
 .metadata {
   margin: 0;
   font: var(--step0) var(--sansSerif);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .metadata span {
@@ -157,11 +168,11 @@ main div *:last-child {
 
 .contact p {
   margin-top: var(--step0);
-  color: var(--indigoDye);
+  color: var(--violetOverWhite);
 }
 
 .contact hr {
-  border: 0.5px solid var(--indigoDye);
+  border: 0.5px solid var(--violetOverWhite);
 }
 
 code {
@@ -171,12 +182,12 @@ code {
 /* Footer */
 footer {
   padding: calc(var(--margin) * 0.5);
-  background: var(--darkSienna);
-  color: var(--lightOrange);
+  background: var(--black);
+  color: var(--white);
   font-size: var(--step0);
 }
 
 footer a {
   text-decoration: none;
-  color: var(--chineseRed);
+  color: var(--orangeOverBlack);
 }
