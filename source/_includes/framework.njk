@@ -44,22 +44,58 @@
       <link rel="apple-touch-icon" sizes="310x310" href="/mstile-310x310.png">
    </head>
 
-   <body>
-      <nav>
-         {%- for mainPage in collections.mainMenuPages -%}
-            <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a>
-         {%- endfor -%}
-      </nav>
-      <main>
+   {% if nameDisplayed == "Home" or nameDisplayed == "Contact" %}
+
+      <body id="navHeaderFooterTogether" style="background: url('{{ photo }}') center / cover no-repeat">
+         <nav>
+            {%- for mainPage in collections.mainMenuPages -%}
+               <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a>
+            {%- endfor -%}
+         </nav>
          {{ content | safe }}
-      </main>
-      <footer>
-         <p>This website was built by <a href="/">Franco Scarpa</a>
-         </p>
-         <a href="/privacypolicy/">Privacy policy</a> / 
+         <footer>
+            <div>
+               <p>This website was built by <a href="/">Franco Scarpa</a>
+               </p>
+               <a href="/privacypolicy/">Privacy policy</a> / 
          <a href="/contact/">Contact</a> / 
          <a href="/accessibility/">Accessibility</a>
-      </footer>
-      {% include "script.html" %}
-   </body>
+            </div>
+         </footer>
+         {% include "script.html" %}
+      </body>
+
+   {% else %}
+
+      <body>
+         <div id="navHeaderTogether" style="background: url('{{ photo }}') center / cover no-repeat">
+            <nav>
+               {%- for mainPage in collections.mainMenuPages -%}
+                  <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a>
+               {%- endfor -%}
+            </nav>
+            <header>
+               <h1>{{ h1 }}</h1>
+               {% if h2 %}
+                  <h2>{{ h2 }}</h2>
+               {% endif %}
+            </header>
+         </div>
+         <main>
+            {{ content | safe }}
+         </main>
+         <footer id="blackFooter">
+            <div>
+               <p>This website was built by <a href="/">Franco Scarpa</a>
+               </p>
+               <a href="/privacypolicy/">Privacy policy</a> / 
+         <a href="/contact/">Contact</a> / 
+         <a href="/accessibility/">Accessibility</a>
+            </div>
+         </footer>
+         {% include "script.html" %}
+      </body>
+
+   {% endif %}
+
 </html>

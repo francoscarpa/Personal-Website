@@ -1,20 +1,16 @@
 ---
 layout: framework.njk
+renderData:
+  photo: {{ photo }}
 ---
-<header>
-   <h1>{{ h1 }}</h1>
-</header>
-
-<div>
-   <p class="metadata underH1">
-      <a href="/blog/">Blog</a> » {{ h1 }}</p>
+<p class="metadata underH1">
+   <a href="/blog/">Blog</a> » {{ h1 }}</p>
+<p class="metadata">
+   <span>Published on</span><span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span></p>
+{% if updated %}
    <p class="metadata">
-      <span>Published on</span><span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span></p>
-   {% if updated %}
-      <p class="metadata">
-         <span>Updated on</span><span>{{updated}}</span></p>
-   {% endif %}
-   {{ content | safe }}
+      <span>Updated on</span><span>{{updated}}</span></p>
+{% endif %}
+{{ content | safe }}
 
-   {% include "contact.html" %}
-</div>
+{% include "contact.html" %}

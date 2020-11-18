@@ -1,3 +1,4 @@
+/* General */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,9 +33,33 @@ body {
 
 body {
   font: 100%/1.45 var(--sansSerif);
-  background: var(--black);
+}
+
+#navHeaderFooterTogether {
   display: flex;
   flex-direction: column;
+  background-blend-mode: multiply;
+}
+
+#navHeaderFooterTogether header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#navHeaderTogether {
+  height: 100%;
+  background-blend-mode: multiply;
+}
+
+#navHeaderTogether header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - calc(var(--step0) * 5));
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 a {
@@ -65,16 +90,21 @@ h6 {
 
 /* Navigation */
 nav {
-  padding: calc(var(--margin) * 0.5);
-  font-size: var(--step0);
-  max-width: calc(var(--step0) * 30);
+  padding-left: calc(var(--margin) * 0.5);
+  height: calc(var(--step0) * 4);
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  font-size: var(--step0);
 }
 
 nav a {
+  font-weight: bold;
   text-decoration: none;
   color: var(--orangeOverBlack);
+}
+
+nav a:not(:first-child) {
+  margin-left: calc(var(--margin) * 0.3);
 }
 
 .active {
@@ -83,22 +113,18 @@ nav a {
 
 /* Main content */
 main {
-  flex: 1;
-}
-
-main div:nth-child(2) {
-  padding: calc(var(--margin) * 0.5);
   background: var(--white);
+  flex: 1;
+  padding: calc(var(--margin) * 0.5);
 }
 
-main div h2 {
+main h2 {
   color: var(--black);
   margin: var(--step6) 0 var(--step0) 0;
 }
 
 header {
-  background: var(--black);
-  padding: calc(var(--margin) * 0.5);
+  padding: 0 calc(var(--margin) * 0.5);
 }
 
 h1 {
@@ -110,6 +136,7 @@ h2 {
   font: normal var(--step5) / 1.1 var(--serif);
   color: var(--white);
   margin-bottom: 0;
+  text-shadow: 0 0 5px var(--black);
 }
 
 h2 a {
@@ -181,13 +208,21 @@ code {
 
 /* Footer */
 footer {
-  padding: calc(var(--margin) * 0.5);
-  background: var(--black);
+  height: calc(var(--step0) * 7);
+  display: flex;
+  padding-left: calc(var(--margin) * 0.5);
+  flex-direction: column;
+  justify-content: center;
   color: var(--white);
   font-size: var(--step0);
 }
 
+#blackFooter {
+  background-color: var(--black);
+}
+
 footer a {
+  font-weight: bold;
   text-decoration: none;
   color: var(--orangeOverBlack);
 }

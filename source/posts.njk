@@ -5,22 +5,18 @@ tags: mainMenuPage
 order: 3
 nameDisplayed: Posts
 description: Brief, personal thoughts about topics of my interest or just something I want to share with you.
+photo: "/imgs/post.jpg"
+h1: Posts
+h2: Brief, personal thoughts
 ---
-<header>
-   <h1>Posts</h1>
-   <h2>Brief, personal thoughts</h2>
-</header>
-
-<div>
-   {%- for post in collections.posts | reverse -%}
+{%- for post in collections.posts | reverse -%}
+   <p class="metadata">
+      <span>Published on</span><span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span></p>
+   {% if note.date.updated %}
       <p class="metadata">
-         <span>Published on</span><span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span></p>
-      {% if note.date.updated %}
-         <p class="metadata">
-            <span>Updated on</span><span>{{post.data.updated}}</span></p>
-      {% endif %}
-      <p class="link">
-         <a href="{{ post.url }}">{{ post.data.h1 }}</a>
-      </p>
-   {%- endfor -%}
-</div>
+         <span>Updated on</span><span>{{post.data.updated}}</span></p>
+   {% endif %}
+   <p class="link">
+      <a href="{{ post.url }}">{{ post.data.h1 }}</a>
+   </p>
+{%- endfor -%}
