@@ -144,8 +144,13 @@ ol {
 
 ul,
 ol {
-  padding: 0 0 var(--step1) var(--step4);
+  padding: 0 0 0 var(--step4);
   margin: 0;
+}
+
+ul + *,
+ol + * {
+  margin-top: var(--step1);
 }
 
 .metadata {
