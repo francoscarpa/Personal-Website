@@ -39,8 +39,7 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  background-blend-mode: multiply;
-  background: url("/imgs/svg.svg") center / cover no-repeat;
+  background: var(--black) url("/imgs/svg.svg") center / cover no-repeat;
 }
 
 .hero header {
