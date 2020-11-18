@@ -7,12 +7,12 @@
 
 :root {
   --sansSerif: Futura, "Segoe UI", Verdana, sans-serif;
-  --serif: "Baskerville", "Book Antiqua", Georgia, serif;
+  --serif: Georgia, serif;
   --monospace: "Monaco", Consolas, monospace;
 
   --black: #000;
   --white: #fbfbff;
-  --orangeOverBlack: #ff6347;
+  --orangeOverBlack: #ffae00;
   --redOverWhite: #aa0000;
   --violetOverWhite: #7023b7;
 
@@ -35,31 +35,19 @@ body {
   font: 100%/1.45 var(--sansSerif);
 }
 
-#navHeaderFooterTogether {
+.hero {
   display: flex;
+  height: 100%;
   flex-direction: column;
   background-blend-mode: multiply;
+  background: url("/imgs/svg.svg") center / cover no-repeat;
 }
 
-#navHeaderFooterTogether header {
+.hero header {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-#navHeaderTogether {
-  height: 100%;
-  background-blend-mode: multiply;
-}
-
-#navHeaderTogether header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: calc(100% - calc(var(--step0) * 5));
-  padding-bottom: 0;
-  padding-top: 0;
 }
 
 a {
@@ -91,14 +79,14 @@ h6 {
 /* Navigation */
 nav {
   padding-left: calc(var(--margin) * 0.5);
-  height: calc(var(--step0) * 4);
+  height: calc(var(--step0) * 5);
   display: flex;
   align-items: center;
   font-size: var(--step0);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 nav a {
-  font-weight: bold;
   text-decoration: none;
   color: var(--orangeOverBlack);
 }
@@ -123,6 +111,10 @@ main h2 {
   margin: var(--step6) 0 var(--step0) 0;
 }
 
+main p:last-child {
+  margin-bottom: 0;
+}
+
 header {
   padding: 0 calc(var(--margin) * 0.5);
 }
@@ -136,7 +128,6 @@ h2 {
   font: normal var(--step5) / 1.1 var(--serif);
   color: var(--white);
   margin-bottom: 0;
-  text-shadow: 0 0 5px var(--black);
 }
 
 h2 a {
@@ -147,7 +138,7 @@ main p,
 ul,
 ol {
   margin-bottom: var(--step0);
-  font: var(--step1) / 1.3 var(--serif);
+  font: var(--step1) / 1.4 var(--serif);
   max-width: calc(var(--step2) * 24);
 }
 
@@ -207,22 +198,28 @@ code {
 }
 
 /* Footer */
-footer {
-  height: calc(var(--step0) * 7);
+footer,
+#pInsideHero {
+  height: calc(var(--step0) * 5);
   display: flex;
   padding-left: calc(var(--margin) * 0.5);
   flex-direction: column;
   justify-content: center;
   color: var(--white);
   font-size: var(--step0);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#pInsideHero {
+  color: var(--white);
+  font-size: var(--step2);
 }
 
 #blackFooter {
-  background-color: var(--black);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 footer a {
-  font-weight: bold;
   text-decoration: none;
   color: var(--orangeOverBlack);
 }

@@ -46,7 +46,7 @@
 
    {% if nameDisplayed == "Home" or nameDisplayed == "Contact" %}
 
-      <body id="navHeaderFooterTogether" style="background: url('{{ photo }}') center / cover no-repeat">
+      <body class="hero">
          <nav>
             {%- for mainPage in collections.mainMenuPages -%}
                <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a>
@@ -68,7 +68,7 @@
    {% else %}
 
       <body>
-         <div id="navHeaderTogether" style="background: url('{{ photo }}') center / cover no-repeat">
+         <div class="hero">
             <nav>
                {%- for mainPage in collections.mainMenuPages -%}
                   <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a>
@@ -80,6 +80,7 @@
                   <h2>{{ h2 }}</h2>
                {% endif %}
             </header>
+            <p id="pInsideHero">Scroll down to read&#8230;</p>
          </div>
          <main>
             {{ content | safe }}
