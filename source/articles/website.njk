@@ -1,29 +1,86 @@
 ---
 layout: articleFramework.njk
-title: How I built my personal website - Franco Scarpa
-h1: How I Built my Personal Website
+title: My Website’s Ins and Outs - Franco Scarpa
+h1: My Website’s Ins and Outs
 tags: articles
 date: 2018-11-07
-updated: 2019.9.1
+updated: 2020.11.19
 description: Franco Scarpa created his personal website from scratch. He himself takes care of it and keeps it updated, both in content and functionality.
 photo: "/imgs/note.jpg"
 ---
-<p class="underMetadata">I love the web. Not surprisingly, some of the questions that flash in my mind every time I visit a website are:</p>
+<p class="underMetadata">Professionally, I’m a C# developer, but building stuff for the Web is something I’m also particularly attracted to. To be honest, Web development was the field I was the most interested in once, before moving to <a href="https://www.linkedin.com/company/nebula-cloud/"  target="_blank" rel="noopener noreferrer">my actual job</a>. Working for a company that uses Microsoft technologies, I could have employed <a href="https://dotnet.microsoft.com/apps/aspnet" target="_blank" rel="noopener noreferrer">ASP.NET</a> to build my website. However, I preferred opting for the old HTML, CSS, and JavaScript.
+</p>
+
+<p>I love the Web so much that, still now, questions flash in my mind when I visit a website. Some of those questions are:</p>
+
 <ul>
-   <li>
-      <i>“How was it built?”</i>;</li>
-   <li>
-      <i>“Which technologies were used?”</i>;</li>
-   <li>
-      <i>“Which languages were used?”</i>;</li>
-   <li>
-      <i>“Why did they choose these colours?”</i>;</li>
-   <li>
-      <i>“How does the structure change when I resize the window?”</i>;</li>
-   <li>
-      <i>“Which fonts were used?”</i>;</li>
-   <li>
-      <i>“Does it respect a11y?”</i>.</li>
+   <li>How was it built, and how is it managed?</li>
+   <li>Which technologies have been adopted?</li>
+   <li>Which languages have been used?</li>
+   <li>Why did they prefer these colors?</li>
+   <li>How does the structure change when I resize the browser window?</li>
+   <li>Which fonts were employed?</li>
+   <li>Does this website respect <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener noreferrer">Web accessibility</a>?</li>
+   <li>Which personal data does this website collect?</li>
+   <li>What happens if I turn off the Internet connection?</li>
 </ul>
 
-<p>Each time I was about to create my personal site, a certainty remained in my mind: to let people know how it had been created. Now this site is real, and I certainly don't give up on that. You can read about how I built this website from the ground up on the <a href="/about/#about-build">About</a> page.</p>
+<p>Whenever I was about to build my website, two certainties settled in my mind:</p>
+<ol>
+   <li>I wanted people to know how it would have been made.</li>
+   <li>Content had to be the only stuff being shown.</li>
+</ol>
+
+<p>Now that this website is alive, I unquestionably don’t give up on that will.</p>
+
+<h2>The Minimum Needed</h2>
+<p>Taking inspiration from <a href="https://deathtobullshit.com/">Death to Bullshit</a> and <a href="https://motherfuckingwebsite.com/">a motherfucking website</a>, content rules this website, which doesn’t use analytics, tracking scripts, databases, or social scripts; it doesn’t store cookies nor shows ads. Your privacy and your experience here are more important to me than metrics. I wrote every character of code behind these webpages without resorting to libraries or frameworks, so I know what is in the source code. This website doesn’t:</p>
+<ul>
+   <Li>Use third-party services.</Li>
+   <li>Use external JavaScript libraries.</li>
+   <li>Use a server-side database.</li>
+   <li>Use any script to load social icons and similar.</li>
+   <li>Show any ad.</li>
+</ul>
+
+<h2>Responsive Web Design</h2>
+<p>This website is responsive. This means it can adapt to any device, from smart TVs to smartphones. The use of fixed units like pixels is a distant memory; only relative units like percentages and rem have been used.</p>
+
+<h2>Web-safe Fonts</h2>
+<p>The font stacks used on this website are:</p>
+<ul>
+   <li>
+      <code>Futura, “Segoe UI”, Verdana, sans-serif</code> as sans-serif fonts.</li>
+   <li>
+      <code>Georgia, serif</code> as serif fonts.</li>
+   <li>
+      <code>“Monaco”, Consolas, monospace</code> as monospace fonts.</li>
+</ul>
+
+<p>I could have used fancy, modern Web fonts from libraries like <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a>, but I chose to comply with carefully selected Web-safe fonts so that your browser doesn’t need to make further requests to obtain those fonts. Your time is precious.</p>
+
+<h2>Aesthetic and Accessibility</h2>
+<p>The colors you see are #000, #FBFBFF, #FFAE00, #AA0000 and #7023B7. They’ve been carefully chosen to provide adequate contrast. In general, this website follows the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG</a> to ensure anyone can enjoy it.</p>
+
+<h2>Eleventy and Performance</h2>
+<p>This website is entirely static: it’s made of pure HTML files directly sent by the server (without any previous server-side rendering or access to a database) to your device and rendered by your browser. In particular, using a database puts you in front of additional security issues, not to mention that accessing a database is a slow operation. Server-side rendering is another matter that slows down the website’s loading since a webpage would need to be built on demand before a user can view it. If a website is simple, why don’t you develop it as one or more independent HTML files? Of course, managing every single file would be unproductive since it would force you to edit each of them separately. Static site generators are the game-changer. They take content files, apply custom templates to them, and generate a website made of ready-to-use HTML files. In my case, I used <a href="https://www.11ty.dev/">Eleventy</a>, my favorite, and de facto SSG. I find it to be simple to use, intuitive, and swift. The hero image you see on the top of each webpage is an SVG of just 14 KB, cached adequately on your browser. This website stays away from calling unnecessary resources like unique fonts, frameworks, and libraries. The absence of JavaScript code provides to show the bareness of this “home on the Web.” The compression of the source code further reduces the size of these webpages.</p>
+
+<h2>Fluid Typography</h2>
+<p>Nowadays, users take advantage of the most various devices to access the Web: TVs, desktops, laptops, tablets, smartphones, and even smartwatches. An old, common approach to Web Design limits a webpage’s content in the middle of the viewport and renders it like a single column, with auto margins on the left and the right. I think it’s a pity not using all of the available space devices give us. For this reason, I used CSS variables that depend on the root element’s font size and the viewport’s width. This way, all dimensions, like font sizes, margins, paddings, widths, and borders, are relative to the screen’s available space.</p>
+
+<h2>Netlify, HTTPS, CD, and The JAMstack Approach</h2>
+<p>This website is hosted on <a href="https://www.netlify.com/">Netlify</a> and is guarded through HTTPS. Netlify is an excellent choice for those who want to publish a static website, also for free. <a href="https://www.netlify.com/jamstack/">Netlify and JAMStack go hand-in-hand</a>, and not by chance, this website uses a JAMstack strategy. But what is <a href="https://jamstack.org/" target="_blank" rel="noopener noreferrer">JAMStack</a>? It’s a new approach for building websites, a path that involves using, guess what, only static HTML files, without server-side rendering nor access to databases. This development philosophy makes heavy use of CDNs, without the browser having to reach the Web server. The core thing is that non-static features are obtained through the use of APIs. My website doesn’t use the “A” part of the JAMStack, the APIs, because it doesn’t need them; nevertheless, it remains a JAMStack thing since you’re not forced to use all of the technologies that appear in the acronym. As I wrote in <a href="/articles/cd/">my article about Netlify CD</a>, this website’s project is stored on GitHub, and every time I push changes to the server, Netlify runs a build and publish the result.</p>
+
+<h2>Offline Capabilities</h2>
+<p>The only portion of JavaScript code that appears on these webpages is solely used by a service worker to provide the user with the offline capability to navigate even without an Internet connection. Don’t you believe it? Turn it off and visit another webpage of this website: you never see the <a href="https://p7.hiclipart.com/preview/608/941/233/tyrannosaurus-dino-t-rex-google-chrome-jumping-dinosaur-dinosaur.jpg">downasaur</a>; at the limit, an appropriate offline page shows, telling you which pages you can still reach. Moreover, I provided an appropriate manifest that contains metadata about the website itself. These two features promote this website to a full-fledged <a href="https://web.dev/progressive-web-apps/">PWA</a>: it’s fast, reliable, and you can install it on the home screen of your smartphone. When you first visit this website, the service worker “installs” the main pages for you on your device. Each time you visit a page not already cached, the service worker caches it automatically so you can reach it the next time, even without an Internet connection.</p>
+
+<h2 id="privacyPolicy">Privacy Policy</h2>
+<p>I bet you’ve already spread your data all across the Internet. We put personal info on the Web with an alarming carefreeness. This site doesn’t want to be part of that circle; it doesn’t collect any personal data, it doesn’t provide any private area, and it doesn’t show any form. This website doesn’t:</p>
+
+<ul>
+   <li>Use Google Analytics or other similar services.</li>
+   <li>Use third-party tracking scripts.</li>
+   <li>Store cookies on your browser.</li>
+</ul>
+
+<p>I don’t care about what pages are seen the most. I just want to provide you with content, hoping you find it interesting and useful.</p>

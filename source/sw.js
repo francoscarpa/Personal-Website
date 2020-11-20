@@ -1,5 +1,5 @@
-const CACHE_NAME = "static92";
-const STATIC_FILES = ["/", "/blog/", "/links/", "/about/", "/contact/", "/privacyPolicy/", "/posts/", "/offline/", "/accessibility/", "/imgs/svg.svg"];
+const CACHE_NAME = "static93";
+const STATIC_FILES = ["/", "/blog/", "/links/", "/about/", "/contact/", "/privacyPolicy/", "/posts/", "/offline/", "/imgs/svg.svg", "/style.css"];
 
 self.addEventListener("install", function (event) {
   event.waitUntil(

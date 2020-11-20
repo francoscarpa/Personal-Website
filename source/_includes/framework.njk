@@ -7,12 +7,7 @@
       <title>{{ title }}</title>
       <meta name="description" content="{{ description }}">
       <link rel="manifest" href="/manifest.json">
-      {% set css %}
-      {% include "style.css" %}
-      {% endset %}
-      <style>
-         {{css | cssmin | safe}}
-      </style>
+      <link rel="stylesheet" href="/style.css">
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="application-name" content="Franco Scarpa">
@@ -57,9 +52,8 @@
             <div>
                <p>This website was built by <a href="/">Franco Scarpa</a>
                </p>
-               <a href="/privacypolicy/">Privacy policy</a> / 
-         <a href="/contact/">Contact</a> / 
-         <a href="/accessibility/">Accessibility</a>
+               <a href="/articles/website#privacyPolicy">Privacy policy</a> / 
+         <a href="/contact/">Contact</a>
             </div>
          </footer>
          {% include "script.html" %}
@@ -89,9 +83,8 @@
             <div>
                <p>This website was built by <a href="/">Franco Scarpa</a>
                </p>
-               <a href="/privacypolicy/">Privacy policy</a> / 
-         <a href="/contact/">Contact</a> / 
-         <a href="/accessibility/">Accessibility</a>
+               <a href="/articles/website#privacyPolicy">Privacy policy</a> / 
+         <a href="/contact/">Contact</a>
             </div>
          </footer>
          {% include "script.html" %}
