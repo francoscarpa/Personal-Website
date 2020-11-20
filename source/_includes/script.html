@@ -1,7 +1,6 @@
 <script>
    if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
-         console.log("Service worker registrato");
          navigator.serviceWorker.register("/sw.js");
       });
    }
