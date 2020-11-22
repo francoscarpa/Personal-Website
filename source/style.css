@@ -75,6 +75,11 @@ h6 {
   text-transform: uppercase;
 }
 
+img {
+  max-width: calc(var(--step2) * 24);
+  margin: var(--step2) 0 0 0;
+}
+
 /* Navigation */
 nav {
   padding-left: calc(var(--margin) * 0.5);
@@ -148,7 +153,8 @@ ol {
 }
 
 ul + *,
-ol + * {
+ol + *,
+img + * {
   margin-top: var(--step1);
 }
 
