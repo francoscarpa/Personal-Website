@@ -61,6 +61,7 @@ h4,
 h5,
 h6 {
   line-height: 1.2;
+  text-align: center;
 }
 
 h2,
@@ -75,17 +76,19 @@ h6 {
   text-transform: uppercase;
 }
 
-img {
-  max-width: calc(var(--step2) * 24);
+figure {
+  max-width: 100%;
   margin: var(--step2) 0 0 0;
+  display: block;
+  text-align: center;
 }
 
 /* Navigation */
 nav {
-  padding-left: calc(var(--margin) * 0.5);
   height: calc(var(--step0) * 5);
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: var(--step0);
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -110,9 +113,26 @@ main {
   padding: calc(var(--margin) * 0.5);
 }
 
+main * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 main h2 {
   color: var(--black);
-  margin: var(--step6) 0 var(--step0) 0;
+  margin-top: var(--step6);
+  margin-bottom: var(--step0);
+  max-width: calc(var(--step2) * 24);
+}
+
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  font-family: var(--sansSerif);
+  font-weight: bold;
+  text-align: left;
 }
 
 main p:last-child {
@@ -144,45 +164,44 @@ ol {
   margin-bottom: var(--step0);
   font: var(--step1) / 1.4 var(--serif);
   max-width: calc(var(--step2) * 24);
+  text-align: left;
 }
 
 ul,
 ol {
   padding: 0 0 0 var(--step4);
-  margin: 0;
 }
 
 ul + *,
 ol + *,
-img + * {
+figure + * {
   margin-top: var(--step1);
 }
 
 .metadata {
-  margin: 0;
   font: var(--step0) var(--sansSerif);
   text-overflow: ellipsis;
   overflow: hidden;
+  font-weight: bold;
   white-space: nowrap;
+  margin-bottom: 0;
 }
 
 .metadata span {
-  display: inline-block;
   width: calc(var(--step0) * 7);
-  font-family: var(--serif);
-}
-
-.metadata span:nth-child(2) {
   font-family: var(--sansSerif);
-  font-weight: bold;
 }
 
 .underMetadata {
   margin-top: var(--step5);
 }
 
+.metadataInArticleOrPost {
+  max-width: calc(var(--step2) * 24);
+}
+
 .link {
-  margin: calc(var(--step0) * 0.5) 0 var(--step3) 0;
+  margin: calc(var(--step0) * 0.2) auto var(--step5);
   font-size: var(--step3);
 }
 
@@ -192,15 +211,11 @@ main div *:last-child {
 
 .contact {
   margin-top: var(--step5);
-}
-
-.contact p {
-  margin-top: var(--step0);
+  margin-top: var(--step6);
   color: var(--violetOverWhite);
-}
-
-.contact hr {
-  border: 0.5px solid var(--violetOverWhite);
+  font-size: var(--step1);
+  border-top: calc(var(--step0) * 0.3) dotted var(--black);
+  padding-top: var(--step0);
 }
 
 code {
@@ -212,12 +227,12 @@ footer,
 #pInsideHero {
   height: calc(var(--step0) * 5);
   display: flex;
-  padding-left: calc(var(--margin) * 0.5);
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   color: var(--white);
   font-size: var(--step0);
   background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 #pInsideHero {

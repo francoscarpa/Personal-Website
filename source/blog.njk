@@ -7,15 +7,17 @@ nameDisplayed: Blog
 description: Here you can find Franco Scarpa’s articles about web development and other stuff he cares about.
 photo: "/imgs/blog.jpeg"
 h1: Blog
-h2: Articles about software development and more 
+h2: Articles about software development, personal ideas and projects, and other stuff I care about 
 ---
 {%- for post in collections.articles | reverse -%}
    <p class="metadata">
-      <span>Published on</span><span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span></p>
-   {% if post.data.updated %}
-      <p class="metadata">
-         <span>Updated on</span><span>{{post.data.updated}}</span></p>
-   {% endif %}
+      <span>✍🏻</span>
+      <span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span>
+      {% if post.data.updated %}
+         • <span>🔄</span>
+         <span>{{post.data.updated}}</span>
+      {% endif %}
+   </p>
    <p class="link">
       <a href="{{ post.url }}">{{ post.data.h1 }}</a>
    </p>
