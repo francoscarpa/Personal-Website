@@ -84,6 +84,7 @@ figure {
 
 figure img {
   max-width: 100%;
+  border: calc(var(--step6) * 0.1) solid var(--black);
 }
 
 /* Navigation */
