@@ -94,7 +94,6 @@ nav {
   align-items: center;
   justify-content: center;
   font-size: var(--step0);
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -240,7 +239,6 @@ footer,
 }
 
 #pInsideHero {
-  color: var(--white);
   font-size: var(--step2);
 }
 
