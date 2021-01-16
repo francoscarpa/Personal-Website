@@ -234,7 +234,6 @@ footer,
   justify-content: center;
   color: var(--white);
   font-size: var(--step0);
-  background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -249,4 +248,5 @@ footer,
 footer a {
   text-decoration: none;
   color: var(--orangeOverBlack);
+  background-color: rgba(0, 0, 0, 0.2);
 }
