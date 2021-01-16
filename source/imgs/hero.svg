@@ -1,0 +1,42 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        #one { 
+            animation: goOne 3s ease-in-out infinite alternate;
+            fill: url(#MyGradient);
+            fill-opacity: 0.3;
+        }
+
+        #two { 
+            animation: goTwo 3s ease-in-out -1s infinite alternate;
+            fill: url(#MyGradient);
+            fill-opacity: 0.4;
+        }
+
+        #three { 
+            animation: goThree 3s ease-in-out -2s infinite alternate;
+            fill: url(#MyGradient);
+            fill-opacity: 0.6;
+        }
+
+        #four { 
+            animation: goFour 3s ease-in-out -3s infinite alternate;
+            fill: url(#MyGradient);
+            fill-opacity: 0.8;
+        }
+
+        @keyframes goOne { 100% { d: path("M0,0 L0,400 C164,530 381,384 600,400 L600,0 L0,0"); } }
+        @keyframes goTwo { 100% { d: path("M0,0 L0,400 C431,294 203,533 600,400 L600,0 L0,0"); } }
+        @keyframes goThree { 100% { d: path("M0,0 L0,400 C256,466 388,352 600,400 L600,0 L0,0"); } }
+        @keyframes goFour { 100% { d: path("M0,0 L0,400 C184,444 536,352 600,400 L600,0 L0,0"); } }
+    </style>
+    <defs>
+        <linearGradient id="MyGradient" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#DA22FF" />
+          <stop offset="100%" stop-color="#9733EE" />
+        </linearGradient>
+      </defs>
+    <path id="one" d="M0,0 L0,400 C182,474 521,272 600,400 L600,0 L0,0"/>
+    <path id="two" d="M0,0 L0,410 C162,307 400,477 600,410 L600,0 L0,0"/>
+    <path id="three" d="M0,0 L0,420 C45,525 493,232 600,420 L600,0 L0,0"/>
+    <path id="four" d="M0,0 L0,430 C209,328 547,453 600,430 L600,0 L0,0"/>
+</svg>
