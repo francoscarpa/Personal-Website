@@ -29,3 +29,7 @@ nav a:not(:first-child) {
 footer {
   margin-top: 6rem;
 }
+
+a {
+  color: #0000EE;
+}
