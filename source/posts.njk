@@ -11,11 +11,8 @@ h2: Brief, personal thoughts
 ---
 {%- for post in collections.posts | reverse -%}
    <p class="metadata">
-      <span>✍🏻</span>
       <span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span>
-      {% if note.date.updated %}
-         <span>🔄</span>
-         <span>{{post.data.updated}}</span>
+      {% if note.date.updated %} → <span>{{post.data.updated}}</span>
       {% endif %}
    </p>
    <p class="link">

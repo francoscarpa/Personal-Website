@@ -44,11 +44,11 @@
       <body class="hero">
          <nav>
             {%- for mainPage in collections.mainMenuPages -%}
-               <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a>
+               <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a> 
             {%- endfor -%}
          </nav>
          {{ content | safe }}
-         <footer>
+         <footer id="footerInHero">
             <div>
                <p>This website was built by <a href="/">Franco Scarpa</a>
                </p>
@@ -76,7 +76,6 @@
                   <h2>{{ h2 }}</h2>
                {% endif %}
             </header>
-            <p id="pInsideHero">Scroll down to read</p>
          </div>
          <main>
             {{ content | safe }}

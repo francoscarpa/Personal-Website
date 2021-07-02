@@ -11,11 +11,8 @@ h2: Articles about software development, personal ideas and projects, and other 
 ---
 {%- for post in collections.articles | reverse -%}
    <p class="metadata">
-      <span>✍🏻</span>
       <span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span>
-      {% if post.data.updated %}
-         • <span>🔄</span>
-         <span>{{post.data.updated}}</span>
+      {% if post.data.updated %} → <span>{{post.data.updated}}</span>
       {% endif %}
    </p>
    <p class="link">
