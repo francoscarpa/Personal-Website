@@ -41,6 +41,7 @@
          <nav>{%- for mainPage in collections.mainMenuPages -%}<a href={{ mainPage.url }}>{{ mainPage.data.nameDisplayed }}</a>{%- endfor -%}</nav>
          <header>
             <h1>{{ h1 }}</h1>
+            {% if h2 %} <h2>{{ h2 }}</h2> {% endif %}
          </header>
       </div>
       <main>
@@ -48,8 +49,7 @@
       </main>
       <footer>
          <div>
-            <p>This website was invented, designed, built and is maintained by <a href="/">Franco Scarpa</a></p>
-            <p><a href="/articles/website#privacyPolicy">Privacy policy</a> / <a href="/contact/">Contact</a></p>
+            <p>Everything is written on this website reflects <a href="/">Franco Scarpa</a>’s personal views. If you have questions, ideas or suggestions, let’s <a href="/contact/">get in touch</a>. This website was invented, designed, built and is maintained by <a href="/">Franco Scarpa</a>. You can read the <a href="/articles/website#privacyPolicy">privacy policy</a> of this website. This website was built with <a href="https://www.11ty.dev/">Eleventy</a>, it’s hosted on <a href="https://www.netlify.com/">Netlify</a> and it’s source code is versioned on <a href="https://github.com/">GitHub</a></p>
          </div>
       </footer>
       {% include "script.html" %}
