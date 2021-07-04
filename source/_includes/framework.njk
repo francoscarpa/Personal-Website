@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,6 @@
       <meta name="msapplication-navbutton-color" content="#000">
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
       <meta name="msapplication-starturl" content="/">
-
       <link rel="icon" sizes="192x192" href="/android-chrome-192x192.png">
       <link rel="apple-touch-icon" sizes="192x192" href="/android-chrome-192x192.png">
       <link rel="icon" sizes="512x512" href="/android-chrome-512x512.png">
@@ -38,61 +36,22 @@
       <link rel="icon" sizes="310x310" href="/mstile-310x310.png">
       <link rel="apple-touch-icon" sizes="310x310" href="/mstile-310x310.png">
    </head>
-
-   {% if nameDisplayed == "Home" or nameDisplayed == "Contact" %}
-
-      <body class="hero">
-         <nav>
-            {%- for mainPage in collections.mainMenuPages -%}
-               <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a> 
-            {%- endfor -%}
-         </nav>
+   <body>
+      <div>
+         <nav>{%- for mainPage in collections.mainMenuPages -%}<a href={{ mainPage.url }}>{{ mainPage.data.nameDisplayed }}</a>{%- endfor -%}</nav>
+         <header>
+            <h1>{{ h1 }}</h1>
+         </header>
+      </div>
+      <main>
          {{ content | safe }}
-         <footer id="footerInHero">
-            <div>
-               <p>This website was built by <a href="/">Franco Scarpa</a>
-               </p>
-               <p>
-                  <a href="/articles/website#privacyPolicy">Privacy policy</a> / 
-         <a href="/contact/">Contact</a>
-               </p>
-            </div>
-         </footer>
-         {% include "script.html" %}
-      </body>
-
-   {% else %}
-
-      <body>
-         <div class="hero">
-            <nav>
-               {%- for mainPage in collections.mainMenuPages -%}
-                  <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a>
-               {%- endfor -%}
-            </nav>
-            <header>
-               <h1>{{ h1 }}</h1>
-               {% if h2 %}
-                  <h2>{{ h2 }}</h2>
-               {% endif %}
-            </header>
+      </main>
+      <footer>
+         <div>
+            <p>This website was invented, designed, built and is maintained by <a href="/">Franco Scarpa</a></p>
+            <p><a href="/articles/website#privacyPolicy">Privacy policy</a> / <a href="/contact/">Contact</a></p>
          </div>
-         <main>
-            {{ content | safe }}
-         </main>
-         <footer id="blackFooter">
-            <div>
-               <p>This website was built by <a href="/">Franco Scarpa</a>
-               </p>
-               <p>
-                  <a href="/articles/website#privacyPolicy">Privacy policy</a> / 
-         <a href="/contact/">Contact</a>
-               </p>
-            </div>
-         </footer>
-         {% include "script.html" %}
-      </body>
-
-   {% endif %}
-
+      </footer>
+      {% include "script.html" %}
+   </body>
 </html>

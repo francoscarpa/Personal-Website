@@ -1,12 +1,7 @@
 ---
 layout: framework.njk
-renderData:
-  photo: {{ photo }}
-h2: Post
 ---
-<p class="metadata underH1 metadataInArticleOrPost">
-   <a href="/notes/">Notes</a> » {{ h1 }}</p>
-<p class="metadata metadataInArticleOrPost">
+<p>
    <span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span>
    {% if updated %} → <span>{{updated}}</span> {% endif %}
 </p>

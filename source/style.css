@@ -1,35 +1,10 @@
-body {
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: .5rem;
-}
-
-figure img {
-  margin: auto;
-  max-width: 100%;
-  display: block;
-  border: 1px solid #000;
-}
-
-figcaption {
-  display: block;
-  text-align: center;
-}
-
-nav a:not(:first-child) {
-  margin-left: .5rem;
-}
-
-.contact {
-  margin-top: 6rem;
-}
-
-footer {
-  margin-top: 6rem;
-}
-
-a {
-  color: #0000EE;
-}
+body { max-width: 42rem; margin-left: auto; margin-right: auto; font-family: Georgia, 'Times New Roman', Times, serif; padding: .5rem; }
+figure img { margin: auto; max-width: 100%; display: block; border: 1px solid #000; }
+figcaption { display: block; text-align: center; }
+nav a:not(:first-child) { margin-left: .5rem; }
+.contact { margin-top: 6rem; }
+footer { margin-top: 6rem; }
+a { color: #0000EE; }
+.metadata { margin-bottom: 0; }
+.link { margin-top: 0; }
+.contact { border: 1px solid #000; padding: .5rem; font-style: italic; }
