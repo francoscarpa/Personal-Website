@@ -43,6 +43,6 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "source",
     },
-    templateFormats: ["html", "liquid", "njk", "css", "png", "jpg", "jpeg", "xml", "ico", "txt", "gif", "svg", "webmanifest", "js", "ttf", "json"],
+    templateFormats: ["html", "liquid", "njk", "css", "png", "jpg", "jpeg", "xml", "ico", "txt", "gif", "svg", "webmanifest", "js", "ttf", "json", "pdf"],
   };
 };
