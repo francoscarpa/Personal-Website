@@ -71,3 +71,8 @@ footer p {
 header > * {
     margin: 0;
 }
+
+.listsLinks {
+  font-size: var(--scale3);
+  margin: 0;
+}
