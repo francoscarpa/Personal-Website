@@ -1,5 +1,5 @@
 ---
-layout: framework.njk
+layout: GlobalFramework.njk
 title: "Blog - Franco Scarpa"
 tags: mainMenuPage
 order: 2
@@ -13,7 +13,7 @@ h2: "Articles about Software Development, Ideas, Projects, and Stuff I Care Abou
    <li>
       <p class="metadata">
          <span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span>
-         {% if post.data.updated %} ➞ <span>{{post.data.updated}}</span>
+         {% if post.data.updated %}&nbsp;&nbsp;➞&nbsp;&nbsp;<span>{{post.data.updated}}</span>
          {% endif %}
       </p>
       <p class="listsLinks">
