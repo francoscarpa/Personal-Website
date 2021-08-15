@@ -3,6 +3,6 @@ layout: framework.njk
 ---
 <p>
    <span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span>
-   {% if updated %} → <span>{{updated}}</span> {% endif %}
+   {% if updated %} ➞ <span>{{updated}}</span> {% endif %}
 </p>
 {{ content | safe }}
