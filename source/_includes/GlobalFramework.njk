@@ -13,20 +13,20 @@
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,800;1,800&family=Literata:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="/style.css">
    </head>
    <body>
       <div>
          <nav>
-            {%- for mainPage in collections.mainMenuPages -%}<a href={{ mainPage.url }}>{{ mainPage.data.nameDisplayed }}</a>{%- endfor -%}
+            {%- for mainPage in collections.mainMenuPages -%}
+               <a href={{ mainPage.url }}>{{ mainPage.data.nameDisplayed }}</a>
+            {%- endfor -%}
          </nav>
          <header>
             <h1>{{ h1 }}</h1>
-            {% if h2 %} <h2>{{ h2 }}</h2> {% endif %}
+            {% if h2 %}
+               <h2>{{ h2 }}</h2>
+            {% endif %}
          </header>
       </div>
       <main>
@@ -34,7 +34,15 @@
       </main>
       <footer>
          <div>
-            <p>What’s written on this website (invented, designed, built and maintained by <a href="/">Franco Scarpa</a>, developed with <a href="https://www.11ty.dev/">Eleventy</a>, hosted on <a href="https://www.netlify.com/">Netlify</a> and versioned on <a href="https://github.com/francoscarpa/francoscarpa.com">GitHub</a>) reflects <a href="/">Franco Scarpa</a>’s (its owner) personal views. For questions, ideas or suggestions, let’s <a href="/contact/">get in touch</a>. Read the <a href="/articles/website#privacyPolicy">privacy policy</a>.</p>
+            <p>What’s written on this website (invented, designed, built and maintained by
+               <a href="/">Franco Scarpa</a>, developed with
+               <a href="https://www.11ty.dev/">Eleventy</a>, hosted on
+               <a href="https://www.netlify.com/">Netlify</a>
+               and versioned on
+               <a href="https://github.com/francoscarpa/francoscarpa.com">GitHub</a>) reflects
+               <a href="/">Franco Scarpa</a>’s (its owner) personal views. For questions, ideas or suggestions, let’s
+               <a href="/contact/">get in touch</a>. Read the
+               <a href="/articles/website#privacyPolicy">privacy policy</a>.</p>
          </div>
       </footer>
    </body>
