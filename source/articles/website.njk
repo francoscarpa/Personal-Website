@@ -1,16 +1,13 @@
 ---
 layout: articleFramework.njk
-title: "My Website’s Ins and Outs - Franco Scarpa"
-h1: "My Website’s Ins and Outs"
+title: "And… We’re Online. But, How? - Franco Scarpa"
+h1: "And… We’re Online. But, How?"
 tags: articles
 date: 2018-11-07
 updated: 2020.11.19
 description: "I created my personal website from scratch and I take care of it and keep it updated, both in content and functionality."
 ---
-<p class="underMetadata">Professionally, I’m a C# developer, but building stuff for the Web is something I’m also particularly attracted to. To be honest, Web development was the field I was the most interested in once, before moving to <a href="https://www.linkedin.com/company/nebula-cloud/"  target="_blank" rel="noopener noreferrer">my actual job</a>. Working for a company that uses Microsoft technologies, I could have employed <a href="https://dotnet.microsoft.com/apps/aspnet" target="_blank" rel="noopener noreferrer">ASP.NET</a> to build my website. However, I preferred opting for the old HTML, CSS, and JavaScript.
-</p>
-
-<p>I love the Web so much that, still now, questions flash in my mind when I visit a website. Some of those questions are:</p>
+<p class="underMetadata">Professionally, I’m a C# developer, but building stuff for the Web is something I’m also particularly attracted to. To be honest, Web development was the field I was the most interested in once, before moving to <a href="/CurriculumVitae#currentJob"  target="_blank" rel="noopener noreferrer">my actual job</a>. I love the Web so much that, still now, questions flash in my mind whenever I visit a website, like:</p>
 
 <ul>
    <li><p>How was it built, and how is it managed?</p></li>
@@ -32,27 +29,19 @@ description: "I created my personal website from scratch and I take care of it a
 
 <p>Now that this website is alive, I unquestionably don’t give up on that will.</p>
 
-<h2>The Minimum Needed</h2>
-<p>Taking inspiration from <a href="https://deathtobullshit.com/">Death to Bullshit</a> and <a href="https://motherfuckingwebsite.com/">a motherfucking website</a>, content rules this website, which doesn’t use analytics, tracking scripts, databases, or social scripts; it doesn’t store cookies nor shows ads. Your privacy and your experience here are more important to me than metrics. I wrote every character of code behind these webpages without resorting to libraries or frameworks, so I know what is in the source code. This website doesn’t:</p>
-<ul>
-   <Li><p>Use third-party services.</p></Li>
-   <li><p>Use external JavaScript libraries.</p></li>
-   <li><p>Use a server-side database.</p></li>
-   <li><p>Use any script to load social icons and similar.</p></li>
-   <li><p>Show any ad.</p></li>
-</ul>
-
 <h2>Responsive Web Design</h2>
-<p>This website is responsive. This means it can adapt to any device, from smart TVs to smartphones. The use of fixed units like pixels is a distant memory; only relative units like percentages and rem have been used.</p>
+<p>This website is responsive. This means it can adapt to any device, from smart TVs to smartphones. The use of fixed units like pixels is a distant memory; only relative units like rem have been used.</p>
 
-<h2>Web-safe Fonts</h2>
-<p>The font stack used on this website is: Georgia, “Times New Roman”, Times, serif.</p>
+<h2>Fonts</h2>
+<p>The font stacks used on this website are:</p>
+<ul>
+   <li>"Signika", sans-serif.</li>
+   <li>Literata", serif.</li>
 </ul>
-
-<p>I could have used fancy, modern Web fonts from libraries like <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a>, but I chose to comply with carefully selected Web-safe fonts so that your browser doesn’t need to make further requests to obtain those fonts. Your time is precious.</p>
+</ul>
 
 <h2>Eleventy and Performance</h2>
-<p>This website is entirely static: it’s made of pure HTML files directly sent by the server (without any previous server-side rendering or access to a database) to your device and rendered by your browser. In particular, using a database puts you in front of additional security issues, not to mention that accessing a database is a slow operation. Server-side rendering is another matter that slows down the website’s loading since a webpage would need to be built on demand before a user can view it. If a website is simple, why don’t you develop it as one or more independent HTML files? Of course, managing every single file would be unproductive since it would force you to edit each of them separately. Static site generators are the game-changer. They take content files, apply custom templates to them, and generate a website made of ready-to-use HTML files. In my case, I used <a href="https://www.11ty.dev/">Eleventy</a>, my favorite, and de facto SSG. I find it to be simple to use, intuitive, and swift. This website stays away from calling unnecessary resources like unique fonts, frameworks, and libraries. The absence of JavaScript code provides to show the bareness of this “home on the Web.” The compression of the source code further reduces the size of these webpages.</p>
+<p>This website is entirely static: it’s made of pure HTML files directly sent by the server (without any previous server-side rendering or access to a database) to your device and rendered by your browser. In particular, using a database puts you in front of additional security issues, not to mention that accessing a database is a slow operation. Server-side rendering is another matter that slows down the website’s loading since a webpage would need to be built on demand before a user can view it. If a website is simple, why don’t you develop it as one or more independent HTML files? Of course, managing every single file would be unproductive since it would force you to edit each of them separately. Static site generators are the game-changer. They take content files, apply custom templates to them, and generate a website made of ready-to-use HTML files. In my case, I used <a href="https://www.11ty.dev/">Eleventy</a>, my favorite SSG. I find it to be simple to use, intuitive, and swift. The HTML code compression further reduces the size of these webpages.</p>
 
 <h2>Netlify, HTTPS, CD, and The JAMstack Approach</h2>
 <p>This website is hosted on <a href="https://www.netlify.com/">Netlify</a> and is guarded through HTTPS. Netlify is an excellent choice for those who want to publish a static website, also for free. <a href="https://www.netlify.com/jamstack/">Netlify and JAMStack go hand-in-hand</a>, and not by chance, this website uses a JAMstack strategy. But what is <a href="https://jamstack.org/" target="_blank" rel="noopener noreferrer">JAMStack</a>? It’s a new approach for building websites, a path that involves using, guess what, only static HTML files, without server-side rendering nor access to databases. This development philosophy makes heavy use of CDNs, without the browser having to reach the Web server. The core thing is that non-static features are obtained through the use of APIs. My website doesn’t use the “A” part of the JAMStack, the APIs, because it doesn’t need them; nevertheless, it remains a JAMStack thing since you’re not forced to use all of the technologies that appear in the acronym. As I wrote in <a href="/articles/cd/">my article about Netlify CD</a>, this website’s project is stored on GitHub, and every time I push changes to the server, Netlify runs a build and publish the result.</p>
