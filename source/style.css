@@ -1,7 +1,7 @@
 :root {
   /* Fonts */
-  --SANSSERIF: "Verdana", "Karla", sans-serif;
-  --SERIF: "Georgia", "Literata", serif;
+  --SANSSERIF: "Signika", sans-serif;
+  --SERIF: "Literata", serif;
   --MONOSPACE: "Monaco", Consolas, monospace;
 
   /* Colors */
@@ -24,11 +24,9 @@
 }
 
 body {
-  max-width: 60rem;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 50rem;
+  margin: 0 auto;
   font-family: var(--SERIF);
-  padding: 3vw;
   background: var(--BEIGE);
 }
 
@@ -46,7 +44,10 @@ h6 {
 img {
   margin: auto;
   max-width: 100%;
-  display: block;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
   border: 0.2rem solid var(--RED);
 }
 
@@ -56,15 +57,17 @@ figcaption {
 }
 
 nav {
-  margin-bottom: 3rem;
-  overflow-x: scroll;
-  padding: 0 0 0.6rem 0;
-  text-transform: uppercase;
   font-family: var(--SANSSERIF);
+  font-size: var(--SCALE7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.4;
 }
 
-nav a:not(:first-child) {
-  margin-left: 1rem;
+nav a {
+  margin: 0;
+  color: var(--BEIGE);
 }
 
 header {
@@ -176,4 +179,24 @@ header > * {
 
 .mainList li:not(:first-child) {
   margin-top: 3rem;
+}
+
+#logo {
+  border: none;
+  margin: 0;
+  width: calc(var(--SCALE7) * 9);
+  max-width: 100;
+  border-radius: 50%;
+}
+
+#topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--SCALE7) * .8);
+  background: var(--RED);
+}
+
+#contentContainer {
+  padding: calc(var(--SCALE7) * .8);
 }

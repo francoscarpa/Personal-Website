@@ -14,36 +14,42 @@
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
       <link rel="stylesheet" href="/style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,300;1,700&family=Signika:wght@400;700&display=swap" rel="stylesheet"> 
    </head>
    <body>
-      <div>
+      <div id="topBar">
+         <a href="/"><img id="logo" src="/Images/FrancoScarpa.jpg" alt="Franco Scarpa"></a>
          <nav>
             {%- for mainPage in collections.mainMenuPages -%}
                <a href={{ mainPage.url }}>{{ mainPage.data.nameDisplayed }}</a>
             {%- endfor -%}
          </nav>
-         <header>
-            <h1>{{ h1 }}</h1>
-            {% if h2 %}
-               <h2>{{ h2 }}</h2>
-            {% endif %}
-         </header>
       </div>
-      <main>
-         {{ content | safe }}
-      </main>
-      <footer>
-         <div>
-            <p>What’s written on this website (invented, designed, built and maintained by
-               <a href="/">Franco Scarpa</a>, developed with
-               <a href="https://www.11ty.dev/">Eleventy</a>, hosted on
-               <a href="https://www.netlify.com/">Netlify</a>
-               and versioned on
-               <a href="https://github.com/francoscarpa/francoscarpa.com">GitHub</a>) reflects
-               <a href="/">Franco Scarpa</a>’s (its owner) personal views. For questions, ideas or suggestions, let’s
-               <a href="/contact/">get in touch</a>. Read the
-               <a href="/articles/website#privacyPolicy">privacy policy</a>.</p>
-         </div>
-      </footer>
+      <div id="contentContainer">
+         <header>
+               <h1>{{ h1 }}</h1>
+               {% if h2 %}
+                  <h2>{{ h2 }}</h2>
+               {% endif %}
+         </header>
+         <main>
+            {{ content | safe }}
+         </main>
+         <footer>
+            <div>
+               <p>What’s written on this website (invented, designed, built and maintained by
+                  <a href="/">Franco Scarpa</a>, developed with
+                  <a href="https://www.11ty.dev/">Eleventy</a>, hosted on
+                  <a href="https://www.netlify.com/">Netlify</a>
+                  and versioned on
+                  <a href="https://github.com/francoscarpa/francoscarpa.com">GitHub</a>) reflects
+                  <a href="/">Franco Scarpa</a>’s (its owner) personal views. For questions, ideas or suggestions, let’s
+                  <a href="/contact/">get in touch</a>. Read the
+                  <a href="/articles/website#privacyPolicy">privacy policy</a>.</p>
+            </div>
+         </footer>
+      </div>
    </body>
 </html>
