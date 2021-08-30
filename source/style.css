@@ -1,7 +1,7 @@
 :root {
   /* Fonts */
-  --SANSSERIF: "Signika", sans-serif;
-  --SERIF: "Literata", serif;
+  --SANSSERIF: "Verdana", sans-serif;
+  --SERIF: "Georgia", serif;
   --MONOSPACE: "Monaco", Consolas, monospace;
 
   /* Colors */
@@ -67,7 +67,7 @@ nav {
 
 nav a {
   margin: 0;
-  color: var(--BEIGE);
+  color: var(--RED);
 }
 
 header {
@@ -194,7 +194,7 @@ header > * {
   justify-content: space-between;
   align-items: center;
   padding: calc(var(--SCALE7) * .8);
-  background: var(--RED);
+  margin-bottom: var(--SCALE7);
 }
 
 #contentContainer {
