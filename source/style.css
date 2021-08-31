@@ -64,11 +64,6 @@ header {
   margin-top: 6rem;
 }
 
-footer {
-  margin-top: 6rem;
-  font-size: 0.85rem;
-}
-
 a {
   color: var(--RED);
   text-decoration: none;
@@ -141,12 +136,22 @@ h5 {
 }
 
 footer {
-  padding: 0 0 calc(var(--SCALE7) * .8) 0;
+  padding: calc(var(--SCALE7) * .2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--RED);
+  color: var(--BEIGE);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer p {
   font-size: var(--SCALE7);
   margin: 0;
+  text-align: center;
 }
 
 header > * {
@@ -210,4 +215,8 @@ nav a {
   margin: 0;
   color: var(--RED);
   line-height: 1;
+}
+
+main {
+  margin-bottom: var(--SCALE1);
 }
