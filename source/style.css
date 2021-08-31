@@ -1,6 +1,6 @@
 :root {
   /* Fonts */
-  --SANSSERIF: "Verdana", sans-serif;
+  --SANSSERIF: "Trebuchet MS", Verdana, sans-serif;
   --SERIF: "Georgia", serif;
   --MONOSPACE: "Monaco", Consolas, monospace;
 
@@ -24,7 +24,7 @@
 }
 
 body {
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 0 auto;
   font-family: var(--SERIF);
   background: var(--BEIGE);
@@ -54,20 +54,6 @@ img {
 figcaption {
   display: block;
   text-align: center;
-}
-
-nav {
-  font-family: var(--SANSSERIF);
-  font-size: var(--SCALE7);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.4;
-}
-
-nav a {
-  margin: 0;
-  color: var(--RED);
 }
 
 header {
@@ -154,8 +140,13 @@ h5 {
   font-size: var(--SCALE5);
 }
 
+footer {
+  padding: 0 0 calc(var(--SCALE7) * .8) 0;
+}
+
 footer p {
   font-size: var(--SCALE7);
+  margin: 0;
 }
 
 header > * {
@@ -184,19 +175,39 @@ header > * {
 #logo {
   border: none;
   margin: 0;
-  width: calc(var(--SCALE7) * 9);
-  max-width: 100;
+  width: 10rem;
   border-radius: 50%;
+  display: block;
 }
 
 #topBar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   padding: calc(var(--SCALE7) * .8);
   margin-bottom: var(--SCALE7);
 }
 
+#topBar > a {
+  display: flex;
+  align-items: center;
+}
+
 #contentContainer {
-  padding: calc(var(--SCALE7) * .8);
+  padding: calc(var(--SCALE7) * .8) calc(var(--SCALE7) * .8) 0 calc(var(--SCALE7) * .8);
+}
+
+nav {
+  font-family: var(--SANSSERIF);
+  font-size: 0.889rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin: 0;
+  color: var(--RED);
+  line-height: 1;
 }
