@@ -28,6 +28,7 @@ body {
   margin: 0 auto;
   font-family: var(--SERIF);
   background: var(--BEIGE);
+  overflow-y: scroll;
 }
 
 h1,
