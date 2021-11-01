@@ -16,27 +16,30 @@
       <link rel="stylesheet" href="/style.css">
    </head>
    <body>
-      <div id="topBar">
-         <a href="/"><img id="logo" src="/Images/FrancoScarpa.jpg" alt="Franco Scarpa"></a>
-         <nav>
-            {%- for mainPage in collections.mainMenuPages -%}
-               <a href={{ mainPage.url }}>{{ mainPage.data.nameDisplayed }}</a>
-            {%- endfor -%}
-         </nav>
-      </div>
-      <div id="contentContainer">
+      <div id="HeroDiv">
+         <div>
+            <a href="/"><img id="logo" src="/Images/FrancoScarpa.jpg" alt="Franco Scarpa"></a>
+            <nav>
+               {%- for mainPage in collections.mainMenuPages -%}
+                  <a href={{ mainPage.url }}>{{ mainPage.data.nameDisplayed }}</a>
+               {%- endfor -%}
+            </nav>
+         </div>
          <header>
-               <h1>{{ h1 }}</h1>
-               {% if h2 %}
-                  <h2>{{ h2 }}</h2>
-               {% endif %}
+            <h1>{{ h1 }}</h1>
+            {% if h2 %}
+            <h2>{{ h2 | safe }}</h2>
+            {% endif %}
          </header>
-         <main>
-            {{ content | safe }}
-         </main>
-         <footer>
-            <p>© 2021 Franco Scarpa. All rights reserved</p>
-         </footer>
+         {% if (nameDisplayed != "Home") and (nameDisplayed != "Contacts") %}
+            <p>Scroll down</p>
+         {% else %}
+            <footer><p>© 2021 Franco Scarpa. All rights reserved</p></footer>
+         {% endif %}
       </div>
+      {% if (nameDisplayed != "Home") and (nameDisplayed != "Contacts") %}
+      <main>{{ content | safe }}</main>
+      <footer><p>© 2021 Franco Scarpa. All rights reserved</p></footer>
+      {% endif %}
    </body>
 </html>

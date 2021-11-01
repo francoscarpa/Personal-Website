@@ -7,18 +7,19 @@
   --SANSSERIF: "Trebuchet MS", Verdana, sans-serif;
   --SERIF: "Georgia", serif;
   --MONOSPACE: "Monaco", Consolas, monospace;
+
   /* Colors */
   --GREEN: #189ba3;
   --RED: #ec0b19;
   --BEIGE: #fffde7;
+
   /* Scales, "Minor Third" + "Augmented Fourth" (https://type-scale.com/, first two ratios ignored because difficult to manage) */
   --SCALE1: calc(1.728rem + 2.827vw);
   --SCALE2: calc(1.266rem + 1.999vw);
   --SCALE3: calc(1.125rem + 1.414vw);
   --SCALE4: calc(1rem + 1vw);
   --SCALE5: calc(0.889rem + 0.707vw);
-  --SCALE6: calc(0.79rem + 0.5vw);
-  /* Paragraphs */
+  --SCALE6: calc(0.79rem + 0.5vw); /* Paragraphs */
   --SCALE7: calc(0.702rem + 0.354vw);
 }
 
@@ -43,14 +44,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
-}
-#HeroDiv div {
-  display: flex;
-  justify-content: space-between;
-}
-#HeroDiv h1, #HeroDiv h2, #HeroDiv p {
-  text-align: center;
-  margin: 0;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1, h2, p {
+    text-align: center;
+    margin: 0;
+  }
 }
 
 h1,
@@ -235,4 +238,4 @@ main + footer {
 
 .Center {
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}
