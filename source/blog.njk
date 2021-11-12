@@ -4,18 +4,17 @@ title: "Blog - Franco Scarpa"
 tags: mainMenuPage
 order: 2
 nameDisplayed: "Blog"
-description: "Articles about Web development and stuff I care about that I wrote and updated."
+description: "Articles About Web development and stuff I care about that I wrote and updated."
 h1: "Blog"
-h2: "Articles about Software Development, Ideas, Projects, and Stuff I Care About"
+h2: "Articles about software development and stuff I care about"
 ---
 <ul class="mainList">
    {%- for post in collections.articles | reverse -%}
    <li>
-      <p class="metadata">
-         <span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span>
-         {% if post.data.updated %}&nbsp;&nbsp;➞&nbsp;&nbsp;<span>{{post.data.updated}}</span>
-         {% endif %}
-      </p>
+      <div class="Metadata">
+         <p>Publication: {{ post.date.toLocaleDateString("en-EN") }}</p>
+         {% if post.data.updated %}<p>Last update: {{ post.data.updated }}</p>{% endif %}
+      </div> 
       <p class="listsLinks">
          <a href="{{ post.url }}">{{ post.data.h1 }}</a>
       </p>

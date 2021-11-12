@@ -1,8 +1,8 @@
 ---
 layout: GlobalFramework.njk
 ---
-<p class="Center">
-   <span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span>
-   {% if updated %} ➞ <span>{{updated}}</span> {% endif %}
-</p>
+<div class="Metadata">
+   <p>Publication: {{ page.date.toLocaleDateString("en-EN") }}</p>
+   {% if updated %}<p>Last update: {{ updated }}</p>{% endif %}
+</div>
 {{ content | safe }}

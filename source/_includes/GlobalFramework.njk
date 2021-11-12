@@ -38,8 +38,10 @@
          {% endif %}
       </div>
       {% if (nameDisplayed != "Home") and (nameDisplayed != "Contacts") %}
-      <main>{{ content | safe }}</main>
-      <footer><p>© 2021 Franco Scarpa. All rights reserved</p></footer>
+      <div id="ContentDiv">
+         <main>{{ content | safe }}</main>
+         <footer><p>© 2021 Franco Scarpa. All rights reserved</p></footer>
+      </div>
       {% endif %}
    </body>
 </html>
