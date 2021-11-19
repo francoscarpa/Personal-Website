@@ -52,6 +52,7 @@ body {
 }
 #HeroDiv div, #HeroDiv header, #HeroDiv p {
   max-width: 50rem;
+  margin: auto;
 }
 #HeroDiv h1, #HeroDiv h2, #HeroDiv p {
   text-align: center;
