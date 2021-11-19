@@ -50,6 +50,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+#HeroDiv div, #HeroDiv header, #HeroDiv p {
+  max-width: 50rem;
+}
 #HeroDiv h1, #HeroDiv h2, #HeroDiv p {
   text-align: center;
   margin: 0;
