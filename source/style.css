@@ -23,7 +23,7 @@
   --SCALE7: calc(0.702rem + 0.354vw);
 }
 
-html, body, #HeroDiv {
+html, body, #HeroDiv, #HeroDiv > div {
   height: 100%;
 }
 
@@ -39,20 +39,21 @@ body {
 }
 
 #HeroDiv {
+  background-color: var(--GREY);
+}
+
+#HeroDiv > div {
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  margin: auto;
   /* background: url("/Images/Hero.jpg") center / cover no-repeat; */
-  background-color: var(--GREY);
 }
-#HeroDiv div {
+#HeroDiv > div > div {
   display: flex;
   justify-content: space-between;
-}
-#HeroDiv div, #HeroDiv header, #HeroDiv p {
-  max-width: 50rem;
-  margin: auto;
 }
 #HeroDiv h1, #HeroDiv h2, #HeroDiv p {
   text-align: center;
