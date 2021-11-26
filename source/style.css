@@ -185,14 +185,6 @@ header > * {
   margin-top: 3rem;
 }
 
-#logo {
-  border: none;
-  margin: 0;
-  width: 8rem;
-  border-radius: 50%;
-  display: block;
-}
-
 #topBar {
   display: flex;
   justify-content: space-between;
@@ -214,8 +206,6 @@ nav {
   font-family: var(--SANSSERIF);
   font-size: 0.889rem;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   justify-content: space-between;
 }
 
