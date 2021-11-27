@@ -234,7 +234,7 @@ main + footer {
 }
 
 #ContentDiv {
-  max-width: 50rem;
+  max-width: 45rem;
   margin: auto;
 }
 
@@ -245,4 +245,13 @@ main + footer {
 .Metadata p {
   margin: 0;
   font-size: var(--SCALE7);
+}
+
+code {
+  padding: .2rem;
+  background: #DDD;
+}
+
+figcaption + figcaption {
+  margin-top: calc(var(--SCALE1) * 0.5);
 }
