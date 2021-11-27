@@ -1,11 +1,12 @@
 * {
   box-sizing: border-box;
+  font-weight: 170;
 }
 
 :root {
   /* Fonts */
-  --SANSSERIF: "Trebuchet MS", Verdana, sans-serif;
-  --SERIF: "Georgia", serif;
+  --SANSSERIF: 'Public Sans', sans-serif;
+  --SERIF: 'Public Sans', sans-serif;
   --MONOSPACE: "Monaco", Consolas, monospace;
   /* Colors */
   --RED: #D72323;
@@ -72,11 +73,9 @@ h5,
 h6 {
   font-family: var(--SANSSERIF);
   color: var(--RED);
-  font-weight: normal;
 }
 
 img {
-  margin: auto;
   max-width: 100%;
   display: flex;
   margin: 0;
@@ -106,7 +105,6 @@ a {
 
 h1 {
   margin-bottom: 0;
-  font-weight: bold;
 }
 
 h2 {
@@ -217,8 +215,8 @@ nav a {
 
 main {
   margin-bottom: var(--SCALE1);
-  margin-top: 5rem;
-  padding: 1rem;
+  margin-top: var(--SCALE1);
+  padding: 0 calc(var(--SCALE1) * 0.3);
 }
 
 footer {
