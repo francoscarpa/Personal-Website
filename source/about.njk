@@ -4,28 +4,81 @@ eleventyComputed:
    title: '{{ h1 }} - Franco Scarpa'
 tags: mainMenuPage
 order: 5
-nameDisplayed: About
+nameDisplayed: "Mi presento"
 description: Who is Franco Scarpa? You can find out by reading this page, which contains all the information about him.
-h1: About
-h2: Who I am
+h1: "Mi presento"
+h2: "Ti spiego chi sono"
 ---
-<p>My name is Franco Scarpa (he/him). I’m a software developer working with Azure, .NET and C# since January 2020 at <a href="https://www.linkedin.com/company/nebula-cloud/">Nebula</a>, the Var Group cloud division dedicated to Microsoft Azure technology platforms. From an amateur point of view, I’m also a Web developer: I love creating static websites with Static Site Generators (SSG). I’m interested about:</p>
-<ul>
-   <li>Software development, specifically:</li>
-   <ul>
-      <Li>The <a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#</a> programming language</Li>
-      <li>Cloud development with <a href="https://azure.microsoft.com/">Azure</a></li>
-      <li>Web development</li>
-   </ul>
-   <li>Computer networking</li>
-   <li>Computer building</li>
-   <li><a href="https://www.gnu.org/philosophy/free-sw.en.html">Free</a> software and <a href="https://www.gnu.org/gnu/linux-and-gnu.en.html"><span>GNU</span>/Linux</a>
-   </li>
+<img class="FillParent" src="/Images/FrancoScarpa.jpg">
+
+<p class="Introduction">Mi chiamo <strong>Franco Scarpa</strong>, ho <strong>{{ GlobalVariables.Age }} anni</strong> e sono uno <strong>sviluppatore Azure e <i>software</i></strong> presso <a href="https://www.linkedin.com/company/nebula-cloud/" target="_blank">Nebula</a>, la divisione di <a href="https://www.vargroup.it/" target="_blank">Var Group</a> dedicata alle tecnologie del Cloud Microsoft. Lavoro con <strong>Azure</strong>, <strong>.NET</strong> e <strong>C#</strong>.</p>
+
+<details>
+<summary class="cvSummary">Dati Anagrafici, Contatti e Riferimenti</summary>
+<ul class="no-margin">
+    <li>Nome: <strong>Franco</strong></li>
+    <li>Cognome: <strong>Scarpa</strong></li>
+    <li>Genere: <strong>Uomo</strong></li>
+    <li>Data di nascita: <strong>13 Novembre 1992 ({{ GlobalVariables.Age }} anni)</strong></li>
+    <li>Nazionalità: <strong>Italia</strong></li>
+    <li>Posizione attuale: <strong><a href="https://www.google.com/maps/place/31030+Dosson+Province+of+Treviso/@45.6343622,12.2458154,15z/data=!3m1!4b1!4m5!3m4!1s0x477949ed70d64f79:0x5cbd6f51706cf129!8m2!3d45.6365281!4d12.2552843" target="_blank">Dosson</a></strong></li>
+    <li>Indirizzo <i>e-mail</i>: <strong><a href="mailto:scarpafranco92@hotmail.it">scarpafranco92@hotmail.it</a></strong></li>
+    <li>Sito Web: <strong><a href="https://francoscarpa.com" target="_blank">francoscarpa.com</a></strong></li>
+    <li>Blog: <strong><a href="https://francoscarpa.com/blog/" target="_blank">francoscarpa.com/blog</a></strong></li>
 </ul>
-<p>Moreover, I totally care about:</p>
+</details>
+
+<details>
+<summary class="cvSummary">Obiettivi Professionali</summary>
+<p>Desidero ottenere una conoscenza sempre più approfondita dello sviluppo Cloud con <strong>Azure</strong> e dello sviluppo di soluzioni <i>software</i> sulla piattaforma <strong>.NET</strong> con il linguaggio <strong>C#</strong>. Un’azienda interessata ad assumermi deve sapere che:</p>
 <ul>
-   <li>Climate change.</li>
-   <li>Human rights.</li>
-   <li>Environmental sustainability.</li>
-   <li>Self-improvement.</li>
+    <li>Obiettivo principe per me è la <strong>crescita professionale</strong>.</li>
+    <li>Non mi interessa essere legato a tecnologie obsolete.</li>
+    <li>Lo <i><strong>smart working</strong></i> è un valore per me fondamentale.</li>
 </ul>
+</details>
+
+<details>
+<summary class="cvSummary">Esperienze Lavorative</summary>
+<h4 id="currentJob">Nebula</h4>
+<div class="collapsedParagraphs">
+    <p>Giugno 2020 → Oggi: <strong>Apprendista</strong></p>
+    <p>Gennaio 2020 → Giugno 2020: <strong>Tirocinante</strong></p>
+</div>
+
+<p>La posizione di sviluppatore che ricopro in Nebula mi ha permesso di sfruttare e accrescere le conoscenze acquisite durante i miei studi universitari. Nello specifico ho acquisito competenze nello sviluppo di codice scritto nel linguaggio di programmazione C#, integrato con la piattaforma di sviluppo .NET di Microsoft. Ho acquisito pratica nella gestione del ciclo di vita delle applicazioni, dall'implementazione di interfacce grafiche allo sviluppo, test, fino al rilascio del prodotto e alla sua manutenzione post-distribuzione. I prodotti software su cui lavoro basano il loro back-end su Microsoft Azure.</p>
+    
+<h4>Actv S.p.A.</h4>
+<div class="collapsedParagraphs">
+    <p>Ottobre 2018 → Gennaio 2020: <strong>Marinaio</strong></p>
+    <p>Giugno 2014 → Settembre 2018: <strong>Apprendista Marinaio</strong></p>
+</div>
+
+<p>Iniziato con la qualifica di “Allievo Marinaio” e terminato con quella di “Marinaio”, operavo a bordo dei mezzi di trasporto pubblico acqueo.</p>
+</details>
+
+<details>
+<summary class="cvSummary">Educazione</summary>
+<p>A ottobre del 2018 ho conseguito la laurea triennale in Informatica presso l'omonima facoltà dell’Università Ca‘ Foscari di Venezia.</p>
+</details>
+
+<details>
+<summary class="cvSummary">Abilità Linguistiche</summary>
+<p>Ho una buona padronanza della lingua inglese e sono in grado di mantenere conversazioni, sia scritte che a voce.</p>
+</details>
+
+<details>
+<summary class="cvSummary">Pubblicazioni</summary>
+<p>Ho avuto il piacere di veder pubblicare i miei seguenti articoli:</p>
+<ul>
+    <li><a href="https://www.blog.varprime.com/rafforza-le-tue-soluzioni-web-con-azure-static-web-apps-enterprise-grade-edge/" target="_blank">Rafforza le tue soluzioni Web con Azure Static Web Apps Enterprise-Grade Edge</a>.</li>
+    <li><a href="https://www.blog.varprime.com/microsoft-apre-la-strada-verso-un-futuro-senza-password/" target="_blank">Microsoft apre la strada verso un futuro senza password</a>.</li>
+    <li><a href="https://www.blog.varprime.com/azure-ad-un-caso-studio-reale/" target="_blank">Azure AD: un caso studio reale</a>.</li>
+</ul>
+<p>È anche disponibile la mia tesi di laurea: <a href="/Documents/Thesis.pdf" target="_blank">Insight - Una piattaforma per l’erogazione di contenuti contestualizzati a luoghi e oggetti</a>.</p>
+</details>
+
+<details>
+<summary class="cvSummary">Progetti (Personali e Non)</summary>
+<p>Ho ideato, progettato e sviluppato <a href="/" target="_blank">francoscarpa.com</a>, il sito Web dove attualmente ti trovi, fornendo poi assistenza nella creazione del sito <a href="https://leonardoscarpa.netlify.app/" target="_blank">leonardoscarpa.netlify.app</a>.</p>
+</details>

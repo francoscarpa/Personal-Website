@@ -16,7 +16,7 @@
       <link rel="stylesheet" href="/style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,170;0,300;0,600;1,170;1,300;1,602&display=swap" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,170;0,300;0,600;1,170;1,300;1,600&display=swap" rel="stylesheet"> 
    </head>
    <body>
       <div id="HeroDiv">
@@ -32,14 +32,14 @@
                <h2>{{ h2 | safe }}</h2>
                {% endif %}
             </header>
-            {% if (nameDisplayed != "Home") and (nameDisplayed != "Contacts") %}
-               <p>Scroll down</p>
+            {% if (nameDisplayed != "Home") and (nameDisplayed != "Contatti") and (nameDisplayed != "Blog") %}
+               <p>Scorri in giù</p>
             {% else %}
                <footer><p>© 2022 Franco Scarpa. All rights reserved</p></footer>
             {% endif %}
          </div>
       </div>
-      {% if (nameDisplayed != "Home") and (nameDisplayed != "Contacts") %}
+      {% if (nameDisplayed != "Home") and (nameDisplayed != "Contatti") and (nameDisplayed != "Blog") %}
       <div id="ContentDiv">
          <main>{{ content | safe }}</main>
          <footer><p>© 2022 Franco Scarpa. All rights reserved</p></footer>
