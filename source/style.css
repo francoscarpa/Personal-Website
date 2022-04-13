@@ -9,9 +9,9 @@
   --SERIF: 'Public Sans', sans-serif;
   --MONOSPACE: "Monaco", Consolas, monospace;
   /* Colors */
-  --RED: #C40000;
+  --RED: #B20600;
   --WHITE: #fcf6df;
-  --GREY: #444444;
+  --GREY: #00092C;
   /* Scales, "Minor Third" + "Augmented Fourth" (https://type-scale.com/, first two ratios ignored because difficult to manage) */
   --SCALE1: calc(1.728rem + 2.827vw);
   --SCALE2: calc(1.266rem + 1.999vw);
