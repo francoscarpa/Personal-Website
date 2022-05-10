@@ -231,6 +231,7 @@ footer {
 footer p {
   margin: 0;
   font-size: var(--SCALE7);
+  font-weight: 600;
 }
 
 main + footer {
