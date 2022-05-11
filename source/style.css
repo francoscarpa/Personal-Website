@@ -5,9 +5,9 @@
 
 :root {
   /* Fonts */
-  --SANSSERIF: 'Public Sans', sans-serif;
-  --SERIF: 'Public Sans', sans-serif;
-  --MONOSPACE: "Monaco", Consolas, monospace;
+  --SANSSERIF: sans-serif;
+  --SERIF: serif;
+  --MONOSPACE: monospace;
   /* Colors */
   --RED: #CE1212;
   --WHITE: #EEEBDD;
@@ -39,7 +39,7 @@ body {
 }
 
 #HeroDiv {
-  /*background: url("/Images/HeroBackGround.jpg") var(--GREY) center / cover no-repeat;*/
+  background: url("/Images/rainbow-vortex.svg") var(--GREY) center / cover no-repeat;
   background-color: var(--GREY);
 }
 
@@ -50,7 +50,6 @@ body {
   justify-content: space-between;
   padding: 1rem;
   margin: auto;
-  /* background: url("/Images/Hero.jpg") center / cover no-repeat; */
 }
 #HeroDiv > div > div {
   display: flex;

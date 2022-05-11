@@ -14,22 +14,20 @@
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
       <link rel="stylesheet" href="/style.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,170;0,300;0,600;1,170;1,300;1,600&display=swap" rel="stylesheet"> 
    </head>
    <body>
       <div id="HeroDiv">
          <div>
             <nav>
-               {%- for mainPage in collections.mainMenuPages -%}
-                  <a href={{ mainPage.url }}>{{ mainPage.data.nameDisplayed }}</a>
-               {%- endfor -%}
+               <a href="/">Home</a>
+               <a href="/Blog/">Blog</a>
+               <a href="/About/">Su di me</a>
+               <a href="/Contacts/">Contatti</a>
             </nav>
             <header>
                <h1>{{ h1 }}</h1>
                {% if h2 %}
-               <h2>{{ h2 | safe }}</h2>
+                  <h2>{{ h2 | safe }}</h2>
                {% endif %}
             </header>
             {% if (nameDisplayed != "Home") and (nameDisplayed != "Contatti") and (nameDisplayed != "Blog") %}
