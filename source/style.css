@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
   font-weight: 170;
+  color: var(--GREY);
 }
 
 :root {
   /* Fonts */
-  --SANSSERIF: sans-serif;
-  --SERIF: serif;
+  --SANSSERIF: Verdana, sans-serif;
+  --SERIF: Georgia, serif;
   --MONOSPACE: monospace;
   /* Colors */
   --RED: #CE1212;
@@ -58,7 +59,7 @@ body {
 #HeroDiv h1, #HeroDiv h2 {
   text-align: center;
   margin: 0;
-  color: var(--RED);
+  color: var(--GREY);
 }
 #HeroDiv p {
   text-align: center;
