@@ -26,7 +26,7 @@
 	color: var(--MY-GREY);
 	font-family: var(--MY-SANS-SERIF);
 	touch-action: manipulation;
-	line-height: 1.55;
+	line-height: 1.1;
 }
 
 /* To make a full, hero section, with another, centered one inside of it */
@@ -48,7 +48,7 @@ html {
 }
 
 #HeroDiv {
-	background: url("/Images/sun-tornado.svg") var(--MY-RED) center / cover no-repeat;
+	background: url("/images/sun-tornado.svg") var(--MY-RED) center / cover no-repeat;
 
 	* {
 		color: var(--MY-GREY);
@@ -73,7 +73,6 @@ html {
 				align-items: center;
 				flex-direction: column;
 				color: var(--MY-WHITE);
-				line-height: 1;
 				text-decoration: none;
 
 				svg {
@@ -104,25 +103,14 @@ html {
 				text-align: center;
 				font-size: var(--MY-SCALE-1);
 				font-weight: bold;
-				line-height: 1.1;
-
-				i {
-					line-height: 1.1;
-				}
 			}
 
 			h2 {
 				margin: 0;
 				text-align: center;
 				font-size: var(--MY-SCALE-2);
-				line-height: 1.1;
-
-				i {
-					line-height: 1.1;
-				}
 
 				a {
-					line-height: 1.1;
 					text-decoration: none;
 					color: var(--MY-RED);
 				}
@@ -189,6 +177,7 @@ html {
 		ol li {
 			font-size: var(--MY-SCALE-6);
 			font-family: var(--MY-SERIF);
+			line-height: 1.55;
 
 			a,
 			i,
@@ -202,12 +191,6 @@ html {
 		ul,
 		ol {
 			margin-left: var(--MY-SCALE-2);
-		}
-
-		h3,
-		h4,
-		h5 {
-			line-height: 1.1;
 		}
 
 		h3 {
