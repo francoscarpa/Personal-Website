@@ -30,15 +30,21 @@
 }
 
 /* To make a full, hero section, with another, centered one inside of it */
-html,
-body,
-#HeroDiv,
-#HeroDivContent {
+html {
 	height: 100%;
-}
 
-body {
-	background: var(--MY-WHITE);
+	body {
+		height: 100%;
+		background: var(--MY-WHITE);
+
+		#HeroDiv {
+			height: 100%;
+
+			#HeroDivContent {
+				height: 100%;
+			}
+		}
+	}
 }
 
 #HeroDiv {
@@ -158,6 +164,7 @@ body {
 	}
 
 	main {
+		padding: 0 var(--MY-SCALE-6);
 
 		p,
 		ul,
@@ -166,7 +173,8 @@ body {
 			margin-top: var(--MY-SCALE-6);
 		}
 
-		ul, ol {
+		ul,
+		ol {
 			margin-left: 3rem;
 		}
 
@@ -212,6 +220,14 @@ body {
 		.Metadata p {
 			font-size: var(--MY-SCALE-7);
 			margin-top: var(--MY-SCALE-7);
+		}
+
+		strong {
+			font-weight: bold;
+
+			i {
+				font-weight: bold;
+			}
 		}
 	}
 
