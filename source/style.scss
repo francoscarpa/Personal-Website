@@ -41,7 +41,8 @@ html {
 
 		#HeroDiv {
 			height: 100%;
-			background: url("/images/sun-tornado.svg") var(--MY-RED) center / cover no-repeat;
+			// background: url("/images/sun-tornado.svg") var(--MY-RED) center / cover no-repeat;
+			background: linear-gradient(to top right, #fc4a1a, #f7b733);
 		
 			* {
 				color: var(--MY-GREY);
