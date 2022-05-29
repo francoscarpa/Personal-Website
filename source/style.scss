@@ -141,26 +141,30 @@ html {
 			margin: auto;
 			padding: var(--MY-SCALE-1) 0;
 		
-			h3,
-			h4,
-			h5,
-			h6 {
-				font-family: var(--MY-SANS-SERIF);
-				color: var(--MY-RED);
-			}
-		
-			img {
-				max-width: 100%;
-				display: flex;
-			}
-		
-			a {
-				color: var(--MY-RED);
-				text-decoration: none;
-			}
-		
 			main {
 				padding: 0 var(--MY-SCALE-6);
+
+				img {
+					max-width: 100%;
+					display: flex;
+				}
+			
+				a {
+					color: var(--MY-RED);
+					text-decoration: none;
+
+					i {
+						color: var(--MY-RED);
+					}
+				}
+
+				h3,
+				h4,
+				h5,
+				h6 {
+					font-family: var(--MY-SANS-SERIF);
+					color: var(--MY-RED);
+				}
 		
 				p,
 				ul,
@@ -230,7 +234,7 @@ html {
 				strong {
 					font-weight: bold;
 		
-					i {
+					i, a {
 						font-weight: bold;
 					}
 				}

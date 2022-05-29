@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
    eleventyConfig.addPassthroughCopy("source/*.svg");
    eleventyConfig.addPassthroughCopy("source/*.webmanifest");
    eleventyConfig.addPassthroughCopy("source/*.xml");
+   eleventyConfig.addPassthroughCopy("source/Documents/*");
    eleventyConfig.addPlugin(eleventySass);
    return { dir: { input: "source", output: "_site" } };
 };
