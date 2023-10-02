@@ -1,26 +1,14 @@
 {
   "name": "francoscarpa.com",
   "version": "1.0.0",
-  "description": "This repository contains the source code of Franco Scarpa’s website, [francoscarpa.com](https://francoscarpa.com). I built it from scratch, using the [Eleventy](https://www.11ty.dev/) static site generator to help me in the process. I love the [JAMStack](https://jamstack.org/) approach to Web development, and I adopted it when building my website, which is static, super-fast, and with attention to Web accessibility.",
-  "main": "index.js",
+  "description": "This repository contains the source code of Franco Scarpa’s website, [francoscarpa.com](https://francoscarpa.com).",
+  "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "eleventy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/francoscarpa/francoscarpa.com.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/francoscarpa/francoscarpa.com/issues"
-  },
-  "homepage": "https://github.com/francoscarpa/francoscarpa.com#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
-  },
-  "dependencies": {
-    "eleventy-sass": "^1.2.1"
+    "@11ty/eleventy": "^2.0.1"
   }
 }

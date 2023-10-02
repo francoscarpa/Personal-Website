@@ -5,14 +5,14 @@ description: "I miei articoli sullo sviluppo software"
 h1: "Blog"
 h2: "I miei articoli sullo sviluppo <i>software</i>"
 ---
-<ul class="mainList">
+<ul>
    {%- for post in collections.articles | reverse -%}
    <li>
-      <div class="Metadata">
+      <div>
          <p>Pubblicazione: {{ post.date.toLocaleDateString("en-EN") }}</p>
          {% if post.data.updated %}<p>Ultimo aggiornamento: {{ post.data.updated }}</p>{% endif %}
-      </div> 
-      <p class="listsLinks">
+      </div>
+      <p>
          <a href="{{ post.url }}">{{ post.data.h1 }}</a>
       </p>
    </li>
