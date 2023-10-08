@@ -3,7 +3,7 @@ $CrimsonPro-VariableItalic: "CrimsonPro-VariableItalic";
 $Oswald-Variable: "Oswald-Variable";
 $Black: #000;
 $White: #FFF;
-$Red: #ee5151;
+$Red: #a10000;
 $Beige: #EDEBE7;
 
 /* Fonts */
@@ -11,18 +11,21 @@ $Beige: #EDEBE7;
     font-family: $CrimsonPro-Variable;
     src: url('/Style/Fonts/CrimsonPro-Variable.ttf') format("truetype-variations");
     font-weight: 1 999;
+    font-display: swap;
 }
 
 @font-face {
     font-family: $CrimsonPro-VariableItalic;
     src: url('/Style/Fonts/CrimsonPro-VariableItalic.ttf') format("truetype-variations");
     font-weight: 1 999;
+    font-display: swap;
 }
 
 @font-face {
     font-family: $Oswald-Variable;
     src: url('/Style/Fonts/Oswald-Variable.ttf') format("truetype-variations");
     font-weight: 1 999;
+    font-display: swap;
 }
 
 /* Layout */
