@@ -11,6 +11,7 @@ module.exports = function (eleventyConfig) {
    eleventyConfig.addPassthroughCopy("source/*.webmanifest");
    eleventyConfig.addPassthroughCopy("source/*.xml");
    eleventyConfig.addPassthroughCopy("source/Documents/*");
+   eleventyConfig.addPassthroughCopy("source/*.toml");
    eleventyConfig.setLayoutResolution(false);
 
    // Enable inclusive language (seems to not be working).
