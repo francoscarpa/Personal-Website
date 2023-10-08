@@ -1,0 +1,15 @@
+---
+layout: PostLayout.njk
+title: "Eleventy Notes - Franco Scarpa"
+description: "Franco Scarpa’s notes about the Eleventy SSG."
+h1: "Eleventy Notes"
+created: 2023-10-08
+updated: 2023-10-08
+---
+<ul>
+    <li>Always use a lowercase <code>index.html</code> file as start page, don’t use <code>Index.html</code>.</li>
+    <li>Layouts goes in the <code>_includes</code> folder, since Eleventy looks for them from inside there.</li>
+    <li>By default, Eleventy sortes collections by creation date.</li>
+    <li>Make use of the “data cascade” (for example, for posts, put all the common front matter’s data in their common layout’s front matter).</li>
+    <li>I use custom fields for “created” and “updated” in front matter because I don’t want to be tied to other things, such as with <code>git Last Modified</code> and <code>git Created</code> that implies to use Git.</li>
+</ul>

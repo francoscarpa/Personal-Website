@@ -1,20 +1,17 @@
 ---
-layout: GlobalFramework.njk
+layout: RootLayout.njk
 title: "Blog - Franco Scarpa"
-description: "I miei articoli sullo sviluppo software"
+description: "Blog page of Franco Scarpa’s website."
 h1: "Blog"
-h2: "I miei articoli sullo sviluppo <i>software</i>"
+tags: MainNavPages
+order: 2
 ---
-<ul>
-   {%- for post in collections.articles | reverse -%}
-   <li>
-      <div>
-         <p>Pubblicazione: {{ post.date.toLocaleDateString("en-EN") }}</p>
-         {% if post.data.updated %}<p>Ultimo aggiornamento: {{ post.data.updated }}</p>{% endif %}
-      </div>
-      <p>
-         <a href="{{ post.url }}">{{ post.data.h1 }}</a>
-      </p>
-   </li>
-   {%- endfor -%}
-</ul>
+{%- for post in collections.Posts | reverse -%}
+<div class="PostListEntry">
+   <p>Published on {{ post.data.created.toLocaleDateString("en-EN") }}</p>
+   <p>Last update on {{ post.data.updated.toLocaleDateString("en-EN") }}</p>
+   <p>
+      <a href="{{ post.url }}">{{ post.data.h1 | safe }}</a>
+   </p>
+</div>
+{%- endfor -%}

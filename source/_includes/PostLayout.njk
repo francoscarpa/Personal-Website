@@ -1,0 +1,12 @@
+---
+layout: RootLayout.njk
+tags: Posts
+---
+<div class="PostMetadata">
+   <p>Published on {{ created.toLocaleDateString("en-EN") }}</p>
+   <p>Last update on {{ updated.toLocaleDateString("en-EN") }}</p>
+</div>
+
+{{ content | safe }}
+
+<p class="ReturnToTheBlog"><a href="/Blog/">← Return to blog</a></p>

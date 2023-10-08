@@ -1,0 +1,120 @@
+---
+layout: PostLayout.njk
+title: "Better images - Franco Scarpa"
+description: "Franco Scarpa’s understanding of how the HTML picture element works."
+h1: "My understanding of the HTML <code>picture</code> element"
+created: 2023-10-08
+updated: 2023-10-08
+---
+
+<h2>Introduction</h2>
+
+<p>In general, three factors matter for better images: <strong>format</strong>, <strong>size</strong> and
+  <strong>behaviour</strong>.
+</p>
+
+<p>Following is an example of the HTML <code>picture</code> element:</p>
+
+<div class="CodeSnippet">
+  <pre><code>&lt;picture&gt;
+  &lt;source type=&quot;image/avif&quot;
+          srcset=&quot;/Images/cli--FhskL-300.avif 300w,
+                  /Images/cli--FhskL-600.avif 600w,
+                  /Images/cli--FhskL-900.avif 900w&quot;
+          sizes=&quot;(min-width: 45rem) 50vw, 100vw&quot; /&gt;
+  
+  &lt;source type=&quot;image/webp&quot; 
+          srcset=&quot;/Images/cli--FhskL-300.webp 300w,
+                  /Images/cli--FhskL-600.webp 600w,
+                  /Images/cli--FhskL-900.webp 900w&quot;
+          sizes=&quot;(min-width: 45rem) 50vw, 100vw&quot; /&gt;
+
+  &lt;source type=&quot;image/jpeg&quot;
+          srcset=&quot;/Images/cli--FhskL-300.jpeg 300w,
+                  /Images/cli--FhskL-600.jpeg 600w,
+                  /Images/cli--FhskL-900.jpeg 900w&quot;
+          sizes=&quot;(min-width: 45rem) 50vw, 100vw&quot; /&gt;
+
+  &lt;img alt=&quot;…&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;
+       src=&quot;/Images/cli--FhskL-300.jpeg&quot; width=&quot;3264&quot; height=&quot;1962&quot; /&gt;
+&lt;/picture&gt;</code></pre>
+</div>
+
+<p>Here, we defined three formats among which the browser can choose: <strong>AVIF</strong>, <strong>WebP</strong> and <strong>JPEG</strong>. For each of them, we specified the <code>srcset</code> for the sources where to find the image files, and the <code>sizes</code> attribute, a kind of media query.</p>
+
+<h2><code>sizes</code></h2>
+
+<p>The above code means: we provide an image with three formats, putting better formats first to take advantage of
+  better and modern compression technologies. For each format, we provide three sizes, <code>300w</code>,
+  <code>600w</code> and <code>900w</code>. The browser follows ours order to select the best one, using
+  <code>sizes</code>. Following the example, in a <strong>one DPI</strong> display, below <strong>720
+    pixels</strong> (the standard for <code>45rem</code>), we’re telling the browser to be aware that the picture will
+  take the <strong>full screen</strong> (<code>100vw</code>). So:
+</p>
+
+<ul>
+  <li>
+    <p>In a mobile device with a width of <code>280px</code>, the picture will need to satisfy this <code>280px</code>
+      rule, so the “300” version will be taken, because the browser chooses the next higher one.</p>
+  </li>
+  <li>
+    <p>In a mobile device with a width of <code>500px</code>, the picture will need to satisfy this <code>500px</code>
+      rule, so the “600” version will be taken, because the browser chooses the next higher one (the “300” version would
+      be blurry, so the browser takes the first version that satisfies the size).</p>
+  </li>
+</ul>
+
+<p>Always in a <strong>one DPI</strong> display, above <strong>720 pixels</strong> (the standard for
+  <code>45rem</code>), we’re telling the browser to be aware that the picture will take half the screen
+  (<code>50vw</code>). So:
+</p>
+
+<ul>
+  <li>
+    <p>In a tablet device with a width of <code>800px</code>, the picture will need to satisfy the
+      <math>
+        <mi>800</mi>
+        <mo>/</mo>
+        <mn>2</mn>
+        <mo>=</mo>
+        <mi>400</mi>
+      </math>
+      rule, so the “600” version will be taken, because the browser chooses the next higher one better than the “300”
+      version (the “300” version would be blurry, so the browser takes the first version that satisfies the size).
+    </p>
+  </li>
+  <li>
+    <p>In a desktop device with a width of <code>1280px</code>, the picture will need to satisfy the <math>
+        <mi>1280</mi>
+        <mo>/</mo>
+        <mn>2</mn>
+        <mo>=</mo>
+        <mi>640</mi>
+      </math>
+      rule, so the “900” version will be taken, because the browser chooses the next higher one better than the “600”
+      version (the “600” version would be blurry, so the browser takes the first version that satisfies the size).</p>
+  </li>
+</ul>
+
+<h2>DPI matters</h2>
+
+<p>In a <strong>two DPIs</strong> display, everything goes “times 2”, so, in a tablet device with a width of
+  <code>800px</code>, the picture will need to satisfy the
+
+  <math>
+    <mi>800</mi>
+    <mo>/</mo>
+    <mn>2</mn>
+    <mo>*</mo>
+    <mn>2</mn>
+    <mo>=</mo>
+    <mi>400</mi>
+    <mo>*</mo>
+    <mn>2</mn>
+    <mo>=</mo>
+    <mi>800</mi>
+  </math>
+  rule, so the “900” version will be taken, because the browser chooses the next higher one better than the “600”
+  version (the “600” version would be blurry in a two DPIs display, so the browser takes the first version that
+  satisfies the size).
+</p>
