@@ -72,7 +72,7 @@ module.exports = function (eleventyConfig) {
    eleventyConfig.addCollection("Posts", function (collectionApi) {
       var x = collectionApi.getFilteredByTag("Posts");
       var y = x.sort((a, b) => {
-         return a.data.created - b.data.created;
+         return b.data.created - a.data.created;
       });
       return y;
    });
