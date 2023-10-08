@@ -68,6 +68,15 @@ module.exports = function (eleventyConfig) {
       return y;
    });
 
+   // Use the creation date of posts to sort them.
+   eleventyConfig.addCollection("Posts", function (collectionApi) {
+      var x = collectionApi.getFilteredByTag("Posts");
+      var y = x.sort((a, b) => {
+         return a.data.created - b.data.created;
+      });
+      return y;
+   });
+
    // Get the current year.
    eleventyConfig.addShortcode("CurrentYear", () => new Date().getFullYear());
 
