@@ -1,4 +1,4 @@
 [[headers]]
   for = "/*.webmanifest"
   [headers.values]
-    Content-Type = "application/manifest+jso; utf-8"
+    Content-Type = "application/manifest+jso"
