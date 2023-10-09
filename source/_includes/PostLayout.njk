@@ -1,6 +1,8 @@
 ---
 layout: RootLayout.njk
 tags: Posts
+eleventyComputed:
+   title: "{{ h1 }} - Franco Scarpa"
 ---
 <div class="PostMetadata">
    <p>Published on {{ created.toLocaleDateString("en-EN") }}</p>

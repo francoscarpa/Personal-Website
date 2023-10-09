@@ -45,8 +45,9 @@ html {
         display: flex;
         flex-direction: column;
         min-height: 100%;
-        padding: 3vw;
+        padding: 2vw;
         font-weight: 300;
+        line-height: 1.2;
 
         nav {
             display: flex;
@@ -133,10 +134,9 @@ html {
 }
 
 .PostListEntry {
+
     p:first-child {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
+        margin: 0;
     }
 
     p:not(:first-child) {
@@ -148,7 +148,17 @@ html {
     }
 }
 
+.PostListEntry:first-child {
+    margin-top: 1rem;
+}
 
+.PostListEntry:not(:first-child) {
+    margin-top: 2rem;
+}
+
+main p:first-child {
+    margin-top: 1rem;
+}
 
 .PostListMetadata:not(:first-child) {
     margin-top: 1rem;

@@ -2,6 +2,7 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const htmlmin = require("html-minifier");
 const sass = require("sass");
 const Image = require("@11ty/eleventy-img");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
    eleventyConfig.addPassthroughCopy("source/Style/Fonts");
@@ -99,6 +100,8 @@ module.exports = function (eleventyConfig) {
 
       return Image.generateHTML(metadata, imageAttributes);
    });
+
+   eleventyConfig.addPlugin(syntaxHighlight);
 
    return { dir: { input: "source", output: "_site" } };
 };
